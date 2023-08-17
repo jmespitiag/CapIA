@@ -1,0 +1,26 @@
+@import 'partials/variables.scss';
+
+body{
+    background-color: $info;
+}
+
+#Capy{
+    width: 55%;
+}
+
+#frase{
+    width: 50%;
+}
+
+#box{
+    background-color: $success;
+    
+}
+
+#button1{
+    background-color: $primary;
+}
+
+#button2{
+    background-color: $primary;
+}

@@ -117,7 +117,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = '/static/'
+# Define la ubicación donde se recopilarán los archivos estáticos para producción
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Puede ser cualquier ruta que desees
 
+# Agrega la ubicación de las carpetas de archivos estáticos de tus aplicaciones
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'PruebaVocacional', 'static'),
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
