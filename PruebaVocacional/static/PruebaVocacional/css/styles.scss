@@ -1,31 +1,36 @@
 @import 'partials/variables.scss';
 
-body{
+body {
     background-color: $info;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#Capy{
-    
+#Capy {
     max-width: 55%;
     height: 33rem;
-    
 }
 
-#frase{
+#frase {
     max-width: 45%;
     height: auto;
 }
 
-
-
-#box{
+#box {
     background-color: $success;
-    
 }
 
-#button1{
+#button1 {
     background-color: $success;
-    border-color: $primary ;
+    border-color: $primary;
     border-width: 0.3rem;
+    margin-left: 5rem;
+    margin-right: 10rem;
 }
 
+#li {
+    text-decoration: none;
+    color: white;
+}

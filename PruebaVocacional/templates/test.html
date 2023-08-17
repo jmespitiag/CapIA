@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Vocacional</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Test Vocacional</h1>
+        <form method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="Nombre Completo" class="form-label">Nombre Completo</label>
+                <input type="text" class="form-control" id="nombre" name="Nombre_completo" required>
+            </div>
+            <div class="mb-3">
+                <label for="Edad" class="form-label">Edad:</label>
+                <input type="number" class="form-control" id="edad" name="Edad" required>
+            </div>
+            <div class="mb-3">
+                <label for="Categorias Ocupacionales" class="form-label">Categorias Ocupacionales:</label>
+                <textarea class="form-control" id="intereses" name="categorias_ocupacionales" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="Materias" class="form-label">Materias</label>
+                <input type="text" class="form-control" id="pregunta1" name="materias" required>
+            </div>
+            <div class="mb-3">
+                <label for="Competencias profesionales" class="form-label">Competencias profesionales</label>
+                <input type="text" class="form-control" id="pregunta2" name="competencia_profesionales" required>
+            </div>
+            <div class="mb-3">
+                <label for="Valores Ocupacionales" class="form-label">Valores Ocupacionales</label>
+                <input type="text" class="form-control" id="pregunta3" name="valores_ocupacionales" required>
+            </div>
+            <div class="mb-3">
+                <label for="Inventario de intereses Personales" class="form-label">Inventario de intereses Personales</label>
+                <input type="text" class="form-control" id="pregunta4" name="inventario_intereses" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>

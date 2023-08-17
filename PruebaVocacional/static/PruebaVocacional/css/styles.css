@@ -1,5 +1,15 @@
 body {
   background-color: #36393F;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #Capy {
@@ -20,5 +30,12 @@ body {
   background-color: #0fae13;
   border-color: #806b39;
   border-width: 0.3rem;
+  margin-left: 5rem;
+  margin-right: 10rem;
+}
+
+#li {
+  text-decoration: none;
+  color: white;
 }
 /*# sourceMappingURL=styles.css.map */
