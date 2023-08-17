@@ -2,5 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def home(request):
-    return(render(request,'home.html'))
-# Create your views here.
+    return render(request,'home.html')
+
+
+def chat(request):
+    return render(request, 'chat.html')

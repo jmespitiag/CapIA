@@ -5,12 +5,18 @@ body{
 }
 
 #Capy{
-    height: 40rem;
+    
+    max-width: 55%;
+    height: 33rem;
+    
 }
 
 #frase{
-    height: 35rem;
+    max-width: 45%;
+    height: auto;
 }
+
+
 
 #box{
     background-color: $success;
@@ -18,9 +24,8 @@ body{
 }
 
 #button1{
-    background-color: $primary;
+    background-color: $success;
+    border-color: $primary ;
+    border-width: 0.3rem;
 }
 
-#button2{
-    background-color: $primary;
-}

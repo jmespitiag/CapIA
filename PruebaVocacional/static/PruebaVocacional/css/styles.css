@@ -3,11 +3,13 @@ body {
 }
 
 #Capy {
-  height: 40rem;
+  max-width: 55%;
+  height: 33rem;
 }
 
 #frase {
-  height: 35rem;
+  max-width: 45%;
+  height: auto;
 }
 
 #box {
@@ -15,10 +17,8 @@ body {
 }
 
 #button1 {
-  background-color: #806b39;
-}
-
-#button2 {
-  background-color: #806b39;
+  background-color: #0fae13;
+  border-color: #806b39;
+  border-width: 0.3rem;
 }
 /*# sourceMappingURL=styles.css.map */

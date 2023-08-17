@@ -16,9 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from PruebaVocacional import views as PruebaViews
+from PruebaVocacional import views as capy
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', PruebaViews.home)
+    path('', capy.home),
+    path('chat/',capy.chat)
 ]
