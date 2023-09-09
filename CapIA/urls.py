@@ -20,6 +20,8 @@ from PruebaVocacional import views as capy
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', capy.home),
-    path('test/',capy.test)
+    path('', capy.home,name='home'),
+    path('test/',capy.test, name='test'),
+    path('test/answers',capy.answers,name='answers')
+    path('chat',)
 ]

@@ -1,0 +1,179 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../Capy/fonts/Roboto-BlackItalic.ttf");
+  font-weight: bold;
+  font-style: bold;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../Capy/fonts/Roboto-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+#login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#login-form-1 {
+  padding: 9%;
+  background: #0fae13;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+  color: #fff;
+}
+
+#login-form-2 {
+  padding: 9%;
+  background: #fff; /* Cambia el color de fondo a blanco */
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+  color: #282726; /* Cambia el color del texto */
+}
+
+#Capy {
+  transform: scaleX(-1);
+}
+
+#hello {
+  color: #0fae13;
+  font-weight: 500;
+  font-family: "Roboto";
+  font-weight: bold;
+}
+
+#text {
+  color: #40444d;
+  font-family: "Roboto";
+  font-weight: bold;
+}
+
+#button {
+  border: 1px solid #40444d;
+  background-color: #0fae13;
+  text-align: center;
+  outline: white;
+  color: white;
+  font-family: "Roboto";
+  font-weight: bold;
+}
+
+#Capy_nav {
+  font-family: "Roboto";
+  font-weight: bold;
+  color: #dbb973;
+}
+
+#Nav {
+  border: 1px solid #806b39;
+}
+
+#Home {
+  font-family: "Roboto";
+  font-weight: bold;
+  color: white;
+  background-color: #dbb973;
+}
+
+#test_cont1 {
+  border-radius: 1rem;
+  border: 2px solid #0fae13;
+}
+
+#test_cont2 {
+  background-color: #0fae13;
+}
+
+#welcome {
+  font-family: "Roboto";
+  font-weight: bold;
+}
+
+#Exp {
+  font-family: "Roboto";
+  font-weight: bold;
+}
+
+#Capy_sombrero {
+  width: 12rem;
+  height: 12rem;
+}
+
+#test_button {
+  background-color: white;
+  color: #0fae13;
+  font-family: "Roboto";
+  font-weight: bold;
+}
+
+#p1 {
+  width: 3rem;
+  height: 3rem;
+  border: 2.5px solid #0fae13;
+}
+
+#p2 {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 2.5px solid #0fae13;
+}
+
+#p3 {
+  width: 2rem;
+  height: 2rem;
+  border: 2.5px solid #0fae13;
+}
+
+#p4 {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 2.5px solid #40444d;
+}
+
+#p5 {
+  width: 2rem;
+  height: 2rem;
+  border: 2.5px solid #7c1094;
+}
+
+#p6 {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 2.5px solid #7c1094;
+}
+
+#p7 {
+  width: 3rem;
+  height: 3rem;
+  border: 2.5px solid #7c1094;
+}
+
+#max {
+  font-family: "Roboto";
+  font-weight: bold;
+  color: #0fae13;
+}
+
+#min {
+  font-family: "Roboto";
+  font-weight: bold;
+  color: #7c1094;
+}
+
+#question {
+  font-size: "Roboto";
+  font-weight: bold;
+  color: black;
+  text-align: center;
+}
+
+#form {
+  text-align: center;
+}
+
+#description {
+  font-size: "Roboto";
+  font-weight: bold;
+  color: #40444d;
+  text-align: center;
+}/*# sourceMappingURL=styles.css.map */

@@ -55,7 +55,7 @@ ROOT_URLCONF = 'CapIA.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR,'CapIA/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -118,11 +118,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 # Define la ubicación donde se recopilarán los archivos estáticos para producción
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Puede ser cualquier ruta que desees
+  # Puede ser cualquier ruta que desees
 
 # Agrega la ubicación de las carpetas de archivos estáticos de tus aplicaciones
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'PruebaVocacional', 'static'),
+    os.path.join(BASE_DIR, 'CapIA/static'),
 ]
 
 # Default primary key field type
