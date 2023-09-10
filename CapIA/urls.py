@@ -9,8 +9,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', test.home,name='home'),
     path('test/',test.test, name='test'),
-    path('test/answers',test.answers,name='answers')
-    path('chat/',chat.)
+    path('test/answers',test.answers,name='answers'),
+    path('chat/',chat.chat,name="chat")
 
 ]
 
