@@ -1,3 +1,5 @@
+@import  'partials/variables.scss';
+
 @font-face {
   font-family: "Roboto";
   src: url("../Capy/fonts/Roboto-BlackItalic.ttf");
@@ -176,4 +178,13 @@
   font-weight: bold;
   color: #40444d;
   text-align: center;
-}/*# sourceMappingURL=styles.css.map */
+}
+
+.btn-custom {
+  background-color: #0fae13;
+  color: white;
+  font-family: "Roboto";
+  font-weight: bold;
+  border-radius: 1rem;
+  border: 2px solid black;
+}

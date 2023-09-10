@@ -1,7 +1,7 @@
+from .models import Test
 from django import forms
-from .models import Respuesta
 
-class RespuestaForm(forms.ModelForm):
+class TestForm(forms.ModelForm):
     class Meta:
-        model = Respuesta
-        fields = ['Nombre_completo', 'Edad', 'categorias_ocupacionales', 'materias', 'competencia_profesionales', 'valores_ocupacionales', 'inventario_intereses']
+        model = Test
+        fields = ['nombre', 'answers']
