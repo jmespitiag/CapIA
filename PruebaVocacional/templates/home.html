@@ -30,9 +30,9 @@
 				
 				<br>
 				<div class="d-flex justify-content-center">
-					<a href="{% url 'test' %}" id="button" type="button" class="btn btn-primary btn">¡Quiero Estudiar!</a>
+					<a href="{% url 'test' id_estudiante=id_estudiante %}" id="button" type="button" class="btn btn-primary btn">¡Quiero Estudiar!</a>
 					
-					<a href="{% url 'chat' %}" id="button" type="button" class="btn btn-secondary">¡Soy Estudiante!</a>
+					<a href="{% url 'chat' id_estudiante=id_estudiante %}" id="button" type="button" class="btn btn-secondary">¡Soy Estudiante!</a>
 				</div>
 				
                 
@@ -44,5 +44,5 @@
 
 </body>
 </html>
-     Corrige la ruta al archivo CSS -->
+
 

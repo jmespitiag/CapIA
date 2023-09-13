@@ -178,9 +178,50 @@
   text-align: center;
 }
 
-#send.btn.btn-primary {
-  background-color: #0fae13;
-  color: white;
+#nombres {
+  font-size: "Roboto";
+  font-weight: bold;
+  color: black;
+  text-align: center;
+}
+
+#test_1 {
+  font-size: "Roboto";
+  font-weight: bold;
+  color: black;
+}
+
+#test_2 {
+  font-size: "Roboto";
+  font-weight: bold;
+  color: #40444d;
+}
+
+#send {
+  background-color: white;
+  color: #0fae13;
   font-family: "Roboto";
   font-weight: bold;
+}
+
+#button_name {
+  border: 1px solid white;
+  background-color: white;
+  text-align: center;
+  outline: white;
+  color: #dbb973;
+  font-family: "Roboto";
+  font-weight: bold;
+}
+
+#welcomee {
+  font-size: "Roboto";
+  font-weight: bold;
+  color: white;
+}
+
+#ingresa_name {
+  font-size: "Roboto";
+  font-weight: bold;
+  color: white;
 }/*# sourceMappingURL=styles.css.map */

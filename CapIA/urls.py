@@ -7,10 +7,12 @@ from chat import views as chat
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', test.home,name='home'),
-    path('test/',test.test, name='test'),
-    path('test/answers',test.answers,name='answers'),
-    path('chat/',chat.chat,name="chat")
+    path('home/<int:id_estudiante>', test.home,name='home'),
+    path('',test.home_name,name='home_name'),
+    path('test/<int:id_estudiante>',test.test, name='test'),
+    path('test/answers/<int:id_estudiante>',test.answers,name='answers'),
+    path('test/result/<int:id_estudiante>',test.result,name="result"),
+    path('chat/<int:id_estudiante>',chat.chat,name="chat")
 
 ]
 
