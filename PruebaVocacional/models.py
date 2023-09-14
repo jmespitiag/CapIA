@@ -4,7 +4,7 @@ from django.db import models
 class Test(models.Model):
     
     nombre = models.CharField(max_length=25)
-    id_estudiante = models.ForeignKey("Student", verbose_name=("ID de estudiante"), on_delete=models.CASCADE,default=9)
+    id_estudiante = models.ForeignKey("Student", verbose_name=("ID de estudiante"), on_delete=models.CASCADE)
     respuesta1 = models.IntegerField(default=00)
     respuesta2 = models.IntegerField(default=00)
     respuesta3 = models.IntegerField(default=00)

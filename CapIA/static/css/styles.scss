@@ -16,6 +16,69 @@
 
 }
 
+#row_test{
+    border: 2px solid $success;
+}
+#result_tittle{
+    color: $success;
+    font-weight: 500;
+    font-family: 'Roboto' ;
+    font-weight: bold;
+
+}
+#test_hello{
+    background: linear-gradient($success,$warning);
+    -webkit-background-clip: text;
+    color: transparent; 
+    font-weight: 500;
+    font-family: 'Roboto' ;
+    font-weight: bold;
+    
+
+}
+
+#text-result{
+    color: $info; 
+    font-weight: 500;
+    font-family: 'Roboto' ;
+    font-weight: bold;
+}
+
+
+
+#test_exp{
+    background: linear-gradient($warning,$success);
+    -webkit-background-clip: text;
+    color: transparent; 
+    font-weight: 500;
+    font-family: 'Roboto' ;
+    font-weight: bold;
+}
+#casilla1{
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 2.5px solid $success;
+}
+
+#casilla2{
+    width: 1.8rem;
+    height: 1.8rem;
+    border: 2.5px solid $success;
+}
+
+#casilla3{
+    width: 1.8rem;
+    height: 1.8rem;
+    border: 2.5px solid $warning;
+}
+
+#casilla4{
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 2.5px solid $warning;
+}
+
+
 
 #login-container {
     display: flex;
@@ -123,47 +186,7 @@
     
 }
 
-#p1{
-    width: 3rem;
-    height: 3rem;
-    border: 2.5px solid $success;
-}
 
-#p2{
-    width: 2.5rem;
-    height: 2.5rem;
-    border: 2.5px solid $success;
-}
-
-#p3{
-    width: 2rem;
-    height: 2rem;
-    border: 2.5px solid $success;
-}
-
-#p4{
-    width: 1.5rem;
-    height: 1.5rem;
-    border: 2.5px solid $info;
-}
-
-#p5{
-    width: 2rem;
-    height: 2rem;
-    border: 2.5px solid $warning;
-}
-
-#p6{
-    width: 2.5rem;
-    height: 2.5rem;
-    border: 2.5px solid $warning;
-}
-
-#p7{
-    width: 3rem;
-    height: 3rem;
-    border: 2.5px solid $warning;
-}
 
 #max{
     font-family: 'Roboto';
@@ -245,4 +268,21 @@
     font-size: 'Roboto';
     font-weight: bold;
     color:white; 
+}
+
+#tittle_chat{
+    font-size: 'Roboto';
+    font-weight: bold;
+    color: $success;
+}
+
+#text_chat{
+    font-size: 'Roboto';
+    font-weight: bold;
+    color: $primary;
+}
+
+#Capy_Hi{
+    width: 6rem;
+    height: 6rem;
 }

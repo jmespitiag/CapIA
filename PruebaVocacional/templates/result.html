@@ -12,8 +12,37 @@
 </head>
 <body>
     {% block content %}
-    <h5>{{nombre}}</h5>
+    {% csrf_token %}
+    
+        <div class=" d-flex justify-content-center p-3">
 
+        <h1 id="result_tittle">¡Resultados del Test!</h1>
+    </div>
+    {% for pos in ranking %}
+
+    <div id="row_test" class='row p-3' >
+        <div class="col-md-4 justify-content-end">
+            <div></div>
+            <h3 id="text-result">#{{forloop.counter}}</h3>
+
+        </div>
+        <div class="col-md-4">
+            <h4 id="text-result">{{pos.0}}</h4>
+        </div>
+
+        <div class="col-md-4">
+            <h4 id="text-result">{{pos.1}}%</h4>
+        </div>
+
+    </div>
+    {% endfor %}
+    <div class="d-flex justify-content-center">
+    <a id="button" class="btn btn-primary" href="{% url 'home' id_estudiante=id_estudiante %}">Volver a Home</a>
+</div>
     {% endblock content %}
 </body>
 </html>
+
+
+
+

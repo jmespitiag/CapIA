@@ -10,6 +10,66 @@
   font-weight: normal;
   font-style: normal;
 }
+#row_test {
+  border: 2px solid #0fae13;
+}
+
+#result_tittle {
+  color: #0fae13;
+  font-weight: 500;
+  font-family: "Roboto";
+  font-weight: bold;
+}
+
+#test_hello {
+  background: linear-gradient(#0fae13, #7c1094);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 500;
+  font-family: "Roboto";
+  font-weight: bold;
+}
+
+#text-result {
+  color: #40444d;
+  font-weight: 500;
+  font-family: "Roboto";
+  font-weight: bold;
+}
+
+#test_exp {
+  background: linear-gradient(#7c1094, #0fae13);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 500;
+  font-family: "Roboto";
+  font-weight: bold;
+}
+
+#casilla1 {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 2.5px solid #0fae13;
+}
+
+#casilla2 {
+  width: 1.8rem;
+  height: 1.8rem;
+  border: 2.5px solid #0fae13;
+}
+
+#casilla3 {
+  width: 1.8rem;
+  height: 1.8rem;
+  border: 2.5px solid #7c1094;
+}
+
+#casilla4 {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 2.5px solid #7c1094;
+}
+
 #login-container {
   display: flex;
   justify-content: center;
@@ -106,48 +166,6 @@
   font-weight: bold;
 }
 
-#p1 {
-  width: 3rem;
-  height: 3rem;
-  border: 2.5px solid #0fae13;
-}
-
-#p2 {
-  width: 2.5rem;
-  height: 2.5rem;
-  border: 2.5px solid #0fae13;
-}
-
-#p3 {
-  width: 2rem;
-  height: 2rem;
-  border: 2.5px solid #0fae13;
-}
-
-#p4 {
-  width: 1.5rem;
-  height: 1.5rem;
-  border: 2.5px solid #40444d;
-}
-
-#p5 {
-  width: 2rem;
-  height: 2rem;
-  border: 2.5px solid #7c1094;
-}
-
-#p6 {
-  width: 2.5rem;
-  height: 2.5rem;
-  border: 2.5px solid #7c1094;
-}
-
-#p7 {
-  width: 3rem;
-  height: 3rem;
-  border: 2.5px solid #7c1094;
-}
-
 #max {
   font-family: "Roboto";
   font-weight: bold;
@@ -224,4 +242,21 @@
   font-size: "Roboto";
   font-weight: bold;
   color: white;
+}
+
+#tittle_chat {
+  font-size: "Roboto";
+  font-weight: bold;
+  color: #0fae13;
+}
+
+#text_chat {
+  font-size: "Roboto";
+  font-weight: bold;
+  color: #806b39;
+}
+
+#Capy_Hi {
+  width: 6rem;
+  height: 6rem;
 }/*# sourceMappingURL=styles.css.map */
