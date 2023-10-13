@@ -1,0 +1,288 @@
+@import 'partials/variables.scss';
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../Capy/fonts/Roboto-BlackItalic.ttf');
+    font-weight: bold;
+    font-style: bold;
+
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../Capy/fonts/Roboto-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+#row_test{
+    border: 2px solid $success;
+}
+#result_tittle{
+    color: $success;
+    font-weight: 500;
+    font-family: 'Roboto' ;
+    font-weight: bold;
+
+}
+#test_hello{
+    background: linear-gradient($success,$warning);
+    -webkit-background-clip: text;
+    color: transparent; 
+    font-weight: 500;
+    font-family: 'Roboto' ;
+    font-weight: bold;
+    
+
+}
+
+#text-result{
+    color: $info; 
+    font-weight: 500;
+    font-family: 'Roboto' ;
+    font-weight: bold;
+}
+
+
+
+#test_exp{
+    background: linear-gradient($warning,$success);
+    -webkit-background-clip: text;
+    color: transparent; 
+    font-weight: 500;
+    font-family: 'Roboto' ;
+    font-weight: bold;
+}
+#casilla1{
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 2.5px solid $success;
+}
+
+#casilla2{
+    width: 1.8rem;
+    height: 1.8rem;
+    border: 2.5px solid $success;
+}
+
+#casilla3{
+    width: 1.8rem;
+    height: 1.8rem;
+    border: 2.5px solid $warning;
+}
+
+#casilla4{
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 2.5px solid $warning;
+}
+
+
+
+#login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#login-form-1 {
+    padding: 9%;
+    background: $success;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+    color: #fff;
+}
+
+#login-form-2 {
+    padding: 9%;
+    background: #fff; /* Cambia el color de fondo a blanco */
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+    color: #282726; /* Cambia el color del texto */
+}
+
+#Capy{
+    transform: scaleX(-1);
+}
+
+#hello{
+    color: $success;
+    font-weight: 500;
+    font-family: 'Roboto' ;
+    font-weight: bold;
+    
+
+}
+
+#text{
+    color: $info;
+    font-family: 'Roboto' ;
+    font-weight: bold;
+    
+}
+
+#button{
+    border: 1px solid $info;
+    background-color: $success;
+    text-align: center;
+    outline: white;
+    color: white;
+    font-family: 'Roboto' ;
+    font-weight: bold;
+    
+
+}
+
+#Capy_nav{
+    font-family: 'Roboto';
+    font-weight: bold;
+    color: $secondary
+
+}
+
+#Nav{
+    border: 1px solid $primary
+}
+
+#Home{
+    font-family: 'Roboto';
+    font-weight: bold;
+    color: white;
+    background-color: $secondary;
+}
+
+#test_cont1{
+    border-radius: 1rem; 
+    border: 2px solid $success
+}
+
+#test_cont2{
+    background-color: $success;
+    
+    
+}
+
+#welcome{
+    font-family: 'Roboto' ;
+    font-weight: bold;
+}
+
+#Exp{
+    font-family: 'Roboto' ;
+    font-weight: bold;
+}
+
+#Capy_sombrero{
+    width: 12rem;
+    height: 12rem;
+}
+
+#test_button{
+    background-color: white;
+    color: $success;
+    font-family: 'Roboto';
+    font-weight: bold;
+
+    
+}
+
+
+
+#max{
+    font-family: 'Roboto';
+    font-weight: bold;
+    color: $success;
+}
+
+#min{
+    font-family: 'Roboto';
+    font-weight: bold;
+    color: $warning
+}
+
+#question{
+    font-size: 'Roboto';
+    font-weight: bold;
+    color: black;
+    text-align: center;
+}
+
+#form{
+    text-align: center;
+}
+
+#description{
+
+    font-size: 'Roboto';
+    font-weight: bold;
+    color: $info;
+    text-align: center;
+}
+
+
+  #nombres{
+    font-size: 'Roboto';
+    font-weight: bold;
+    color: black;
+    text-align: center;
+  }
+
+  #test_1{
+    font-size: 'Roboto';
+    font-weight: bold;
+    color:black;
+  }
+
+  #test_2{
+    font-size: 'Roboto';
+    font-weight: bold;
+    color: $info;
+  }
+
+  #send{
+    background-color: white;
+    color: $success;
+    font-family: 'Roboto';
+    font-weight: bold;
+  }
+
+  #button_name{
+    border: 1px solid white;
+    background-color: white;
+    text-align: center;
+    outline: white;
+    color: $secondary;
+    font-family: 'Roboto' ;
+    font-weight: bold;
+    
+  }
+
+  #welcomee{
+    font-size: 'Roboto';
+    font-weight: bold;
+    color:white;    
+  }
+
+
+#ingresa_name{
+    font-size: 'Roboto';
+    font-weight: bold;
+    color:white; 
+}
+
+#tittle_chat{
+    font-size: 'Roboto';
+    font-weight: bold;
+    color: $success;
+}
+
+#text_chat{
+    font-size: 'Roboto';
+    font-weight: bold;
+    color: $primary;
+}
+
+#Capy_Hi{
+    width: 6rem;
+    height: 6rem;
+}
