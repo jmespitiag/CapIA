@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'PruebaVocacional',
     'chat',
+    'herramientas',
 ]
 
 MIDDLEWARE = [

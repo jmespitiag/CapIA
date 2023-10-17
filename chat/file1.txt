@@ -1,1 +1,0 @@
-flex-column align-items-center justify-content-center vh-100
