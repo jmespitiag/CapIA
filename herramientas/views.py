@@ -1,3 +1,4 @@
 from django.shortcuts import render
 
-# Create your views here.
+def metodos_estudio(request):
+    return render(request,'metodos-estudio.html')

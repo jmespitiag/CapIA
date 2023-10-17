@@ -158,8 +158,13 @@
     </div>
   </form>
 </div>
+<div id="student-name">{{student.nombre}}</div>
 
 <script>
+  var studentNameElement = document.getElementById("student-name");
+  studentNameElement.style.display = "none"
+  var studentName = studentNameElement.textContent;
+
   const messagesList = document.querySelector('.messages-list');
   const messageForm = document.querySelector('.message-form');
   const messageInput = document.querySelector('.message-input');
@@ -177,7 +182,7 @@
     messageItem.innerHTML = `
         <div class="message-text">
             <div class="message-sender">
-                <b>You</b>
+                <b>${studentName}</b>
             </div>
             <div class="message-content">
                 ${message}

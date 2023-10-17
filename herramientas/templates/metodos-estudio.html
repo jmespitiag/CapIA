@@ -1,0 +1,175 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Metodos de estudio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}"> 
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-lX6Cz9BO3dKWjbDzL/Lqjqn5Z7erC9d6W33ELf5S4Lb5Ko5/R9bo2vsis0z7C0mnf" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container" id="login-container">
+        <div class="row">
+            <div class="col-md-6" id="met-form-1">
+                <img class="img-thumbnail" id="Capy_met" src="https://i.ibb.co/kcz2Cj4/Imagen-10.png" alt="capý">
+    
+            </div>
+            <div class="col-md-6" id="met-form-2">
+                <h1 id="bienvenido" class="pb-5">¡BIENVENIDO AL MUNDO DE LOS METODOS DE ESTUDIO!</h1>
+                <div class="d-flex justify-content-center pd-5 pt-5">
+                    <h4 id="text">En esta ocasión te mostraremos<br> técnicas de estudio y como aplicarlas. </h4>
+                </div>
+                <br>
+                <div class="d-flex justify-content-center">
+                    <button id="next-button" class="btn btn-primary">¡Comencemos!</button>
+                </div>
+            </div>
+
+        
+            <div class="col-md-6" id="met-form-3">
+                <h1 id="met_title" class="pb-5">ACTIVE RECALL</h1>
+                <div class="d-flex justify-content-center">
+                    <h4 id="text-met">(Recuerdo Activo) Implica recordar activamente la información en lugar de solo leerla o tomar notas. Consiste en recuperar de la memoria la información que estás aprendiendo, fortaleciendo la retención a largo plazo y la comprensión <br> <br> <span style="color: #0fae13">¿Como lo aplico?</span>  <br> <br> Puedes explicar un tema a alguien más (o a ti mismo) como si fueras profesor, usando un lenguaje simple. Al hacerlo, identificas áreas de comprensión débil, las "lagunas". Luego, regresas al material de estudio original y revisas esas partes hasta comprenderlas por completo.</h4>
+                </div>
+                <br>
+                <div class="d-flex justify-content-center">
+                    <button id="next-button1" class="btn btn-primary">¡Siguiente!</button>
+                </div>
+            </div>
+            <div class="col-md-6" id="met-form-4">
+                <img class="img-thumbnail" style="margin-top: 50px;"src="https://i.ibb.co/8PzWZc5/Active-recall.png" alt="capý">
+            </div>
+
+        
+            <div class="col-md-6" id="met-form-5">
+                <img class="img-thumbnail" style="margin-top: 50px;"src="https://i.ibb.co/MsHMd3T/pomodoro.png" alt="capý">
+            </div>
+            <div class="col-md-6" id="met-form-6">
+                <h1 id="met_title" class="pb-5">POMODORO</h1>
+                <div class="d-flex justify-content-center">
+                    <h4 id="text-met">Se basa en trabajar en bloques de tiempo cortos seguidos de un breve descanso para aumentar la productividad y la concentración. Se repiten estos ciclos varias veces y luego se toma un descanso más largo. Ayuda a combatir la procrastinación y a mantener la atención en la tarea.<br> <br> <span style="color: #0fae13">¿Como lo aplico?</span>  <br> <br>Durante 25 minutos, te sumerges en una tarea específica. Luego, disfrutas de un breve descanso de 5 minutos para recargar energías. Repite estos ciclos de trabajo y descanso. Después de completar 4 "Pomodoros", toma un descanso más largo de 15-30 minutos.</h4>
+                </div>
+                <br>
+                <div class="d-flex justify-content-center">
+                    <button id="prev-button" class="btn btn-primary">¡Anterior!</button>
+                    <button id="next-button2" class="btn btn-primary">¡Siguiente!</button>
+                </div>
+            </div>
+
+
+            <div class="col-md-6" id="met-form-7">
+                <h1 id="met_title" class="pb-5">REPETICIÓN ESPACIADA</h1>
+                <div class="d-flex justify-content-center">
+                    <h4 id="text-met">Implica revisar información en intervalos de tiempo determinados con el fin de fortalecer la retención a largo plazo. En lugar de estudiar todo de una vez, espaciamos nuestras repasos a lo largo del tiempo, lo que ayuda a recordar mejor la información.<br> <br> <span style="color: #0fae13">¿Como lo aplico?</span>  <br> <br> Primero, estudia a fondo el tema que desees aprender; programa repasos futuros; aumenta los intervalos de tiempo entre repasos, primero puede ser al día, luego a la semana, incluso al mes; enfócate en lo que te resulta difícil. Esto fortalece la retención a largo plazo.</h4>
+                </div>
+                <br>
+                <div class="d-flex justify-content-center">
+                    <button id="prev-button1" class="btn btn-primary">¡Atras!</button>
+                </div>
+            </div>
+            <div class="col-md-6" id="met-form-8">
+                <img class="img-thumbnail" style="margin-top: 100px;"src="https://i.ibb.co/8sRbNzN/1200px-Forgetting-Curve.png" alt="capý">
+            </div>
+        </div>
+    </div>
+
+    <!-- Agrega este script al final de tu documento antes del cierre del body -->
+    <script>
+        $(document).ready(function () {
+            var currentLeftForm = 1; // Iniciar con el primer formulario
+            var currentRightForm = 2;
+    
+            // Ocultar inicialmente el tercer y cuarto formulario
+            $("#met-form-3").hide();
+            $("#met-form-4").hide();
+            $("#met-form-5").hide();
+            $("#met-form-6").hide();
+            $("#met-form-7").hide();
+            $("#met-form-8").hide();
+    
+            // Manejar el clic en el botón "Siguiente"
+            $("#next-button").click(function () {
+                // Ocultar formularios actuales
+                $("#met-form-" + currentLeftForm).hide();
+                $("#met-form-" + currentRightForm).hide();
+    
+                // Actualizar los formularios actuales
+            
+                currentLeftForm += 2;
+                currentRightForm += 2;
+
+    
+                // Mostrar los nuevos formularios actuales
+                $("#met-form-" + currentLeftForm).show();
+                $("#met-form-" + currentRightForm).show();
+            });
+
+            $("#next-button1").click(function () {
+                // Ocultar formularios actuales
+                $("#met-form-" + currentLeftForm).hide();
+                $("#met-form-" + currentRightForm).hide();
+    
+                // Actualizar los formularios actuales
+            
+                currentLeftForm += 2;
+                currentRightForm += 2;
+
+    
+                // Mostrar los nuevos formularios actuales
+                $("#met-form-" + currentLeftForm).show();
+                $("#met-form-" + currentRightForm).show();
+            });
+
+            $("#next-button2").click(function () {
+                // Ocultar formularios actuales
+                $("#met-form-" + currentLeftForm).hide();
+                $("#met-form-" + currentRightForm).hide();
+    
+                // Actualizar los formularios actuales
+            
+                currentLeftForm += 2;
+                currentRightForm += 2;
+
+    
+                // Mostrar los nuevos formularios actuales
+                $("#met-form-" + currentLeftForm).show();
+                $("#met-form-" + currentRightForm).show();
+            });
+    
+            // Manejar el clic en el botón "Anterior" (opcional)
+            $("#prev-button").click(function () {
+                // Ocultar formularios actuales
+                $("#met-form-" + currentLeftForm).hide();
+                $("#met-form-" + currentRightForm).hide();
+    
+                // Actualizar los formularios actuales
+                currentLeftForm -= 2;
+                currentRightForm -= 2;
+    
+                // Mostrar los nuevos formularios actuales
+                $("#met-form-3").show();
+                $("#met-form-4").show();
+            });
+
+            $("#prev-button1").click(function () {
+                // Ocultar formularios actuales
+                $("#met-form-" + currentLeftForm).hide();
+                $("#met-form-" + currentRightForm).hide();
+    
+                // Actualizar los formularios actuales
+                currentLeftForm -= 2;
+                currentRightForm -= 2;
+    
+                // Mostrar los nuevos formularios actuales
+                $("#met-form-5").show();
+                $("#met-form-6").show();
+            });
+        });
+    </script>
+</body>
+</html>

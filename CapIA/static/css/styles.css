@@ -91,6 +91,66 @@
   color: #282726; /* Cambia el color del texto */
 }
 
+#met-form-1 {
+  padding: 9%;
+  background: #dbb973;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+}
+
+#met-form-2 {
+  padding: 9%;
+  background: #fff; /* Cambia el color de fondo a blanco */
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+  color: #282726; /* Cambia el color del texto */
+}
+
+#met-form-3 {
+  padding: 4%;
+  background: #fff; /* Cambia el color de fondo a blanco */
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+  color: #282726; /* Cambia el color del texto */
+}
+
+#met-form-4 {
+  padding: 9%;
+  background: #dbb973;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+  color: #fff;
+}
+
+#met-form-5 {
+  padding: 9%;
+  background: #dbb973;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+}
+
+#met-form-6 {
+  padding: 4%;
+  background: #fff; /* Cambia el color de fondo a blanco */
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+  color: #282726; /* Cambia el color del texto */
+}
+
+#met-form-7 {
+  padding: 4%;
+  background: #fff; /* Cambia el color de fondo a blanco */
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+  color: #282726; /* Cambia el color del texto */
+}
+
+#met-form-8 {
+  padding: 9%;
+  background: #dbb973;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+  color: #fff;
+}
+
 #Capy {
   transform: scaleX(-1);
 }
@@ -102,15 +162,95 @@
   font-weight: bold;
 }
 
+#met_title {
+  color: #dbb973;
+  font-weight: 500;
+  font-family: "Roboto";
+  font-weight: bold;
+  margin-left: 90px;
+}
+
+#bienvenido {
+  color: #dbb973;
+  font-weight: 400;
+  font-family: "Roboto";
+  font-weight: bold;
+  margin-left: 50px;
+}
+
 #text {
   color: #40444d;
   font-family: "Roboto";
   font-weight: bold;
 }
 
+#text-met {
+  color: #40444d;
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#text-met-sub {
+  color: #0fae13;
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 20px;
+}
+
 #button {
   border: 1px solid #40444d;
   background-color: #0fae13;
+  text-align: center;
+  outline: white;
+  color: white;
+  font-family: "Roboto";
+  font-weight: bold;
+}
+
+#next-button {
+  border: 1px solid #40444d;
+  background-color: #dbb973;
+  text-align: center;
+  outline: white;
+  color: white;
+  font-family: "Roboto";
+  font-weight: bold;
+}
+
+#prev-button {
+  border: 1px solid #40444d;
+  background-color: #dbb973;
+  text-align: center;
+  outline: white;
+  color: white;
+  font-family: "Roboto";
+  font-weight: bold;
+}
+
+#prev-button1 {
+  border: 1px solid #40444d;
+  background-color: #dbb973;
+  text-align: center;
+  outline: white;
+  color: white;
+  font-family: "Roboto";
+  font-weight: bold;
+}
+
+#next-button1 {
+  border: 1px solid #40444d;
+  background-color: #dbb973;
+  text-align: center;
+  outline: white;
+  color: white;
+  font-family: "Roboto";
+  font-weight: bold;
+}
+
+#next-button2 {
+  border: 1px solid #40444d;
+  background-color: #dbb973;
   text-align: center;
   outline: white;
   color: white;
@@ -157,6 +297,13 @@
 #Capy_sombrero {
   width: 12rem;
   height: 12rem;
+}
+
+#Capy_met {
+  width: 15rem;
+  height: 15rem;
+  margin-left: 70px;
+  margin-top: 90px;
 }
 
 #test_button {
