@@ -1,8 +1,9 @@
 from django.shortcuts import render, redirect 
 from .models import Clase
-from .forms import ClaseForm
+from .forms import ClaseForm, CalculadoraNotasForm
 from PruebaVocacional.models import Student
 from datetime import time, datetime, timedelta,date
+from .utils import calcular_promedio_ponderado
 
 def agregar_clase(request,id_estudiante):
     estudiante = Student.objects.get(id_estudiante=id_estudiante)
@@ -48,3 +49,38 @@ def horario(request, id_estudiante):
     
     print(clases)
     return render(request, 'horario.html', {'clases': clases, 'id_estudiante':id_estudiante,'semana':semana, 'horas':horas})
+
+def metodos_estudio(request,id_estudiante):
+    return render(request,'metodos-estudio.html',{'id_estudiante':id_estudiante})
+
+def calculaNota(request, id_estudiante):
+    if request.method == 'POST':
+        form = CalculadoraNotasForm(request.POST)
+        if form.is_valid():
+            notas_creditos = []
+
+            for i in range(1, 6):  # Supongamos que tienes 5 entradas de notas y créditos
+                nota = form.cleaned_data.get(f'nota{i}')
+                creditos = form.cleaned_data.get(f'creditos{i}')
+
+                if nota is not None and creditos is not None:
+                    notas_creditos.append((nota, creditos))
+
+            promedio_ponderado = calcular_promedio_ponderado(notas_creditos)
+
+            context = {
+                'promedio_ponderado': promedio_ponderado,
+                'id_estudiante': id_estudiante,  # Asegúrate de incluir id_estudiante en el contexto
+            }
+
+            return render(request, 'resultado_calculo.html', context)
+    else:
+        form = CalculadoraNotasForm()
+
+    context = {
+        'form': form,
+        'id_estudiante': id_estudiante,  # Asegúrate de incluir id_estudiante en el contexto
+    }
+
+    return render(request, 'calcular_nota.html', context)
+

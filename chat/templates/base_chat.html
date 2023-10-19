@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,7 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     {% block styles %}{% endblock %}
+    <style>
+      /* Estilos para el menú desplegable */
+      .nav-item {
+        position: relative;
+        display: inline-block;
+      }
+  
+      .nav-link {
+        text-decoration: none;
+        padding: 1px 2px;
+        color: #333;
+      }
+  
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+  
+      .nav-item:hover .dropdown-content {
+        display: inline;
+      }
+  
+      .dropdown-item {
+        padding: 10px 20px;
+        display: block;
+        text-align: left;
+      }
+  
+      .navbar {
+        background-color: #eee;
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
     {% block content %}{% endblock %}

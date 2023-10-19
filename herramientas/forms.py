@@ -15,3 +15,9 @@ class ClaseForm(forms.ModelForm):
                 attrs={'type': 'time','step': '1800','min': '06:00', 'max': '22:00'}),
         }
         
+    
+class CalculadoraNotasForm(forms.Form):
+    
+    asignatura = forms.CharField(max_length=100)
+    nota = forms.DecimalField(max_digits=5, decimal_places=2)
+    creditos = forms.IntegerField()

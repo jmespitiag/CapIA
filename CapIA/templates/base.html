@@ -57,9 +57,9 @@
           <div class="nav-item">
             <a class="nav-link" id='txt' href="#">Herramientas</a>
             <div class="dropdown-content">
-              <a class="dropdown-item" href="{% url 'horario' id_estudiante=id_estudiante  %}">Horario</a>
-              <a class="dropdown-item" href="#">Opción 2</a>
-              <a class="dropdown-item" href="#">Opción 3</a>
+              <a id='choice' class="dropdown-item" href="{% url 'horario' id_estudiante=id_estudiante  %}">Horario</a>
+              <a id='choice' class="dropdown-item" href="{% url 'metodos-estudio' id_estudiante=id_estudiante  %}">Metodos de estudio</a>
+              <a id='choice' class="dropdown-item" href="#">Opción 3</a>
             </div>
             
       </div>
