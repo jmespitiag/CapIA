@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load custom_filters %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    
+</head>
+<body>
+    {% block content %}  
+    <div class="container mt-2 mb-2">
+        <div class="message" style="display: flex; align-items: center;">
+            <p id="clase_message">¿No tienes nada en tu horario?</p>
+            <a id="añadir_button" href="{% url 'agregar_clase' id_estudiante=id_estudiante %}">¡Añade clases!</a>
+        </div>
+    </div>
+    
+    
+    <div class="container mt-2">
+        <div class="table-responsive">
+            <table id='table'>
+                <thead>
+                    <tr>
+                        <th></th>
+                        {% for dia in semana %}
+                            <th id='dia'>{{ dia }}</th>
+                        {% endfor %}
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for hora in horas %}
+                        <tr>
+                            <th id='hora'>{{ hora }}</th>
+                            {% for dia in clases %}
+                                <td>
+                                    {% for clase in dia %}                                 
+                                        {% if clase.hora_inicio <= hora and clase.hora_fin > hora %}
+                                            <div class="card">
+                                                <div id='celd-in'class="card-body">
+                                                    {{ clase.nombre }}
+                                                </div>
+                                            </div>
+                                        {% endif %}
+                                    {% endfor %}
+                                </td>
+                            {% endfor %}
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    
+    {% endblock content%}
+</body>
+</html>
+
+
+
+          

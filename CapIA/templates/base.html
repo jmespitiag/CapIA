@@ -1,7 +1,45 @@
 {% load static %}
 <head>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <style>
+    /* Estilos para el menú desplegable */
+    .nav-item {
+      position: relative;
+      display: inline-block;
+    }
+
+    .nav-link {
+      text-decoration: none;
+      padding: 10px 20px;
+      color: #333;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .nav-item:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-item {
+      padding: 10px 20px;
+      display: block;
+      text-align: left;
+    }
+
+    .navbar {
+      background-color: #eee;
+      text-align: center;
+    }
+  </style>
+
 </head>
 
 <body>
@@ -13,10 +51,17 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
-          <li class="nav-item">
-            <a id="Home" class="nav-link active" aria-current="page" href="{% url 'home' id_estudiante=id_estudiante %}">Home</a>
+          <li id="Home" class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'home' id_estudiante=id_estudiante %}">Home</a>
           </li>
-        </ul>
+          <div class="nav-item">
+            <a class="nav-link" id='txt' href="#">Herramientas</a>
+            <div class="dropdown-content">
+              <a class="dropdown-item" href="{% url 'horario' id_estudiante=id_estudiante  %}">Horario</a>
+              <a class="dropdown-item" href="#">Opción 2</a>
+              <a class="dropdown-item" href="#">Opción 3</a>
+            </div>
+            
       </div>
     </div>
   </nav>
@@ -24,4 +69,7 @@
     {% block content %}
     {% endblock content %}
   </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-AZyCprH6Rp5iONEXo40PZZbUdZvt5CA4wDMlhksaxTI2M9OGnHk8fYq6nUz5wXjD" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+Jnujsl5+zW/N41EPi8vh4Uqhrj3i2v5X/kT3JW5SwUqOYb" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-FSTS5xJVRr6pOtKx8F+Tzr5eg4sZbuz5D51BpETKUyZdY5p5AEb6WiOOf9ylIcUwX" crossorigin="anonymous"></script>
 </body>

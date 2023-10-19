@@ -1,6 +1,6 @@
 from .models import Test, Student
 from django import forms
-from django.forms import ValidationError,widgets
+from django.forms import ValidationError, widgets
 
 
 class TestForm(forms.ModelForm):

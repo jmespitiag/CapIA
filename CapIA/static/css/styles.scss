@@ -145,6 +145,11 @@
 }
 
 #Home{
+    border-radius: 2px;
+    padding-right: 2rem;
+}
+
+#Home a{
     font-family: 'Roboto';
     font-weight: bold;
     color: white;
@@ -285,4 +290,137 @@
 #Capy_Hi{
     width: 6rem;
     height: 6rem;
+}
+
+#table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  #table thead th {
+    border: 1px solid $primary;
+    background-color: $secondary;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  #table tbody td {
+    border: 1px solid $primary;
+    background-color: whitesmoke;
+    text-align: center;
+  }
+
+
+#celd-in{
+    color: white;
+    background-color: $success;
+    font-size: 'Roboto';
+    font-weight: bold;
+    border: 1px solid $success;
+
+}
+
+#hora{
+    font-size: 'Roboto';
+    font-weight: bold;
+    align-items: center;
+    border: 1px solid $primary;
+    background-color: $secondary;
+    font-weight: bold;
+    text-align: center;
+}
+
+#dia{
+    font-size: 'Roboto';
+    font-weight: bold;
+    align-items: center;
+}
+
+#horario{
+    border-radius: 2px;
+}
+
+#horario a{
+    font-family: 'Roboto';
+    font-weight: bold;
+    color: white;
+    background-color: $secondary;
+    border-radius: 1px;
+}
+#añadir_button{
+    background-color: $secondary; /* Color de fondo principal */
+    border: 2px solid ;
+    border-color: $primary; /* Color del borde */
+    color: $primary; /* Color del texto */
+    padding: 5px 10px; /* Relleno (padding) del botón */
+    border-radius: 4px; /* Bordes redondeados */
+    text-align: center; /* Alineación del texto */
+    text-decoration: none; /* Estilo de subrayado para enlaces */
+    display: inline-block; /* Hacer que el botón sea un elemento en línea */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+    margin-left: 2rem;
+
+}
+
+#clase_message{
+    font-family: 'Roboto';
+    font-weight: bold;
+
+}
+
+#login-form-3{
+    padding: 9%;
+    background: $success;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+    color: #fff;
+
+}
+
+#button_add_class{
+    background-color: $success; /* Color de fondo principal */
+    border: 2px solid ;
+    border-color: $success; /* Color del borde */
+    color: white; /* Color del texto */
+    padding: 10px 20px; /* Relleno (padding) del botón */
+    border-radius: 7rem; /* Bordes redondeados */
+    text-align: center; /* Alineación del texto */
+    text-decoration: none; /* Estilo de subrayado para enlaces */
+    display: inline-block; /* Hacer que el botón sea un elemento en línea */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+    margin-left: 2rem;
+
+}
+
+#login-form-4{
+    padding: 9%;
+    background: #fff; /* Cambia el color de fondo a blanco */
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+    color: #282726; /* Cambia el color del texto */
+
+}
+
+#login-form-4 div{
+    font-family: 'Roboto';
+    font-weight: bold;
+
+}
+
+#txt{
+    font-family: 'Roboto';
+    font-weight: bold;
+    color: $secondary;
+}
+#txt a{
+    font-family: 'Roboto';
+    font-weight: bold;
+}
+
+#choice{
+    font-family: 'Roboto';
+    font-weight: bold;
+    color: $secondary;
 }

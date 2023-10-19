@@ -37,10 +37,10 @@ def answers(request,id_estudiante):
     if request.method == 'POST':
         form = TestForm(request.POST)
         if form.is_valid():
-            test = form.save(commit=False)
-            test.id_estudiante = student
-            test.nombre = student.nombre
-            test.save()
+            form = form.save(commit=False)
+            form.id_estudiante = student
+            form.nombre = student.nombre
+            form.save()
             return redirect('result', id_estudiante=id_estudiante)
         else:
             print("Errores en el formulario:")
