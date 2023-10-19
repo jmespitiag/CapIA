@@ -92,6 +92,15 @@
   color: #282726; /* Cambia el color del texto */
 }
 
+#login-home-2 {
+  padding: 9%;
+  background: #ffffff;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+}
+
 #met-form-1 {
   padding: 9%;
   background: #dbb973;
@@ -157,6 +166,7 @@
 }
 
 #hello {
+  margin-left: 30px;
   color: #0fae13;
   font-weight: 500;
   font-family: "Roboto";
@@ -185,6 +195,18 @@
   font-weight: bold;
 }
 
+#slogan {
+  justify-content: center;
+  color: #dbb973;
+  font-family: "Roboto";
+  font-weight: bold;
+}
+
+#box {
+  border: 2px solid #dbb973;
+  padding: 5px;
+}
+
 #text-met {
   color: #40444d;
   font-family: "Roboto";
@@ -200,6 +222,18 @@
 }
 
 #button {
+  border: 1px solid #40444d;
+  background-color: #0fae13;
+  text-align: center;
+  outline: white;
+  color: white;
+  font-family: "Roboto";
+  font-weight: bold;
+}
+
+#button-home {
+  margin-top: 40px;
+  margin-left: 100px;
   border: 1px solid #40444d;
   background-color: #0fae13;
   text-align: center;

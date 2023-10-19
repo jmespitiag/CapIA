@@ -22,6 +22,8 @@ urlpatterns = [
     path('calculaNota/<int:id_estudiante>', herramientas.calculaNota, name="calculaNota"),
 
 
+    path('chat/<int:id_estudiante>',chat.chat,name="chat"),
+    path('metodos-estudio/<int:id_estudiante>', herramientas.metodos_estudio, name="metodos-estudio")
 
 ]
 

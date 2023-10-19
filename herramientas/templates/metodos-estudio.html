@@ -18,8 +18,11 @@
         <div class="row">
             <div class="col-md-6" id="met-form-1">
                 <img class="img-thumbnail" id="Capy_met" src="https://i.ibb.co/kcz2Cj4/Imagen-10.png" alt="capý">
-    
+                <a href="{% url 'home' id_estudiante=id_estudiante %}">
+                    <button id="button-home" class="btn btn-primary" type="button">Ir a la página de inicio</button>
+                </a>
             </div>
+            
             <div class="col-md-6" id="met-form-2">
                 <h1 id="bienvenido" class="pb-5">¡BIENVENIDO AL MUNDO DE LOS METODOS DE ESTUDIO!</h1>
                 <div class="d-flex justify-content-center pd-5 pt-5">
@@ -44,11 +47,17 @@
             </div>
             <div class="col-md-6" id="met-form-4">
                 <img class="img-thumbnail" style="margin-top: 50px;"src="https://i.ibb.co/8PzWZc5/Active-recall.png" alt="capý">
+                <a href="{% url 'home' id_estudiante=id_estudiante %}">
+                    <button id="button-home" class="btn btn-primary" type="button">Ir a la página de inicio</button>
+                </a>
             </div>
 
         
             <div class="col-md-6" id="met-form-5">
-                <img class="img-thumbnail" style="margin-top: 50px;"src="https://i.ibb.co/MsHMd3T/pomodoro.png" alt="capý">
+                <img class="img-thumbnail" style="margin-top: 5px;"src="https://i.ibb.co/MsHMd3T/pomodoro.png" alt="capý">
+                <a href="{% url 'home' id_estudiante=id_estudiante %}">
+                    <button id="button-home" class="btn btn-primary" type="button">Ir a la página de inicio</button>
+                </a>
             </div>
             <div class="col-md-6" id="met-form-6">
                 <h1 id="met_title" class="pb-5">POMODORO</h1>
@@ -71,12 +80,14 @@
                 <br>
                 <div class="d-flex justify-content-center">
                     <button id="prev-button1" class="btn btn-primary">¡Atras!</button>
-                    <a id="añadir_button2" href="{% url 'home' id_estudiante=id_estudiante %}"> Home </a>
                     
                 </div>
             </div>
             <div class="col-md-6" id="met-form-8">
                 <img class="img-thumbnail" style="margin-top: 100px;"src="https://i.ibb.co/8sRbNzN/1200px-Forgetting-Curve.png" alt="capý">
+                <a href="{% url 'home' id_estudiante=id_estudiante %}">
+                    <button id="button-home" class="btn btn-primary" type="button">Ir a la página de inicio</button>
+                </a>
             </div>
         </div>
     </div>
