@@ -14,7 +14,8 @@ urlpatterns = [
     path('test/answers/<int:id_estudiante>',test.answers,name='answers'),
     path('test/result/<int:id_estudiante>',test.result,name="result"),
     path('chat/<int:id_estudiante>',chat.chat,name="chat"),
-    path('metodos-estudio/', herramienta.metodos_estudio, name="metodos-estudio")
+    path('metodos-estudio/', herramienta.metodos_estudio, name="metodos-estudio"),
+    path('calcular-promedio/<int:id_estudiante>', herramienta.calcular_promedio, name="calcular-promedio")
 
 ]
 

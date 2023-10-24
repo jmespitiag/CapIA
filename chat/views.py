@@ -6,9 +6,10 @@ from .models import Chat
 import openai
 from PruebaVocacional.models import Student
 
+with open('chat/api_key.txt', 'r') as key:
+            api_key = key.read()
 
-
-openai.api_key = "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"
+openai.api_key = api_key
 
 def chat(request, id_estudiante):
     student = Student.objects.get(id_estudiante=id_estudiante)
