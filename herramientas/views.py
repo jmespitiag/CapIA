@@ -1,9 +1,9 @@
 from django.shortcuts import render, redirect 
-from .models import Clase
+from .models import Clase, Nota
 from .forms import ClaseForm, CalculadoraNotasForm
 from PruebaVocacional.models import Student
 from datetime import time, datetime, timedelta,date
-from .utils import calcular_promedio_ponderado
+from django.http import JsonResponse
 
 def agregar_clase(request,id_estudiante):
     estudiante = Student.objects.get(id_estudiante=id_estudiante)
@@ -53,34 +53,28 @@ def horario(request, id_estudiante):
 def metodos_estudio(request,id_estudiante):
     return render(request,'metodos-estudio.html',{'id_estudiante':id_estudiante})
 
-def calculaNota(request, id_estudiante):
+def calcular_promedio(request, id_estudiante):
     if request.method == 'POST':
-        form = CalculadoraNotasForm(request.POST)
-        if form.is_valid():
-            notas_creditos = []
+        student = Student.objects.get(id_estudiante=id_estudiante)
+        notas_antiguas = Nota.objects.filter(student=student)
+        notas_antiguas.delete()
+        materias = request.POST.getlist("materia[]")
+        notas = request.POST.getlist("nota[]")
+        creditos = request.POST.getlist("creditos[]")
+        for materia, nota, credito in zip(materias, notas, creditos):
+            nota_agregar = Nota(student=student, nombre=materia, nota=nota, creditos=credito)
+            nota_agregar.save()
+        print(Nota.objects.filter(student=student))
+        promedio = promedio_ponderado(notas, creditos)
+        return JsonResponse({"promedio":promedio})
+    return render(request, 'calcular-promedio.html', {'id_estudiante':id_estudiante})
 
-            for i in range(1, 6):  # Supongamos que tienes 5 entradas de notas y créditos
-                nota = form.cleaned_data.get(f'nota{i}')
-                creditos = form.cleaned_data.get(f'creditos{i}')
+def promedio_ponderado(calificaciones:list, creditos:list):
+    calificaciones = [float(calificacion) for calificacion in calificaciones]
+    creditos = [float(credito) for credito in creditos]
+    productos = [calificacion * credito for calificacion, credito in zip(calificaciones, creditos)]
+    suma_productos = sum(productos)
+    suma_creditos = sum(creditos)
+    promedio_ponderado = suma_productos / suma_creditos
 
-                if nota is not None and creditos is not None:
-                    notas_creditos.append((nota, creditos))
-
-            promedio_ponderado = calcular_promedio_ponderado(notas_creditos)
-
-            context = {
-                'promedio_ponderado': promedio_ponderado,
-                'id_estudiante': id_estudiante,  # Asegúrate de incluir id_estudiante en el contexto
-            }
-
-            return render(request, 'resultado_calculo.html', context)
-    else:
-        form = CalculadoraNotasForm()
-
-    context = {
-        'form': form,
-        'id_estudiante': id_estudiante,  # Asegúrate de incluir id_estudiante en el contexto
-    }
-
-    return render(request, 'calcular_nota.html', context)
-
+    return promedio_ponderado

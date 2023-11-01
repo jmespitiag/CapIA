@@ -13,13 +13,18 @@ class Clase(models.Model):
         ('Sábado', 'Sábado'),
         ('Domingo', 'Domingo'),
     )
-
-    
     id_clase = models.AutoField(primary_key=True)
     id_estudiante = models.ForeignKey(Student, verbose_name=("ID de estudiante"), on_delete=models.CASCADE, default=00)
     nombre = models.CharField(max_length=50)
     dia = models.CharField(max_length=10, choices=Semana)
     hora_inicio = models.TimeField()
     hora_fin = models.TimeField()
+
+class Nota(models.Model):
+    student = models.ForeignKey(Student, on_delete=models.CASCADE)
+    nombre = models.CharField(max_length=50)
+    nota = models.FloatField()
+    creditos = models.IntegerField()
+
     
     

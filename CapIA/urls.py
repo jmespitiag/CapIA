@@ -19,7 +19,7 @@ urlpatterns = [
     path('test/result/<int:id_estudiante>',test.result,name="result"),
     path('horario/<int:id_estudiante>',herramientas.horario,name='horario'),
     path('horario/agregar/<int:id_estudiante>', herramientas.agregar_clase , name='agregar_clase' ),
-    path('calculaNota/<int:id_estudiante>', herramientas.calculaNota, name="calculaNota"),
+    path('calcular-promedio/<int:id_estudiante>', herramientas.calcular_promedio, name="calcular-promedio"),
 
 
     path('chat/<int:id_estudiante>',chat.chat,name="chat"),

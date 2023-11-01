@@ -1,0 +1,135 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora de Notas</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+<body>
+    <h1 id="calcular-title">
+        MATERIA <span id="calcular-title2">NOTA</span> CREDITOS 
+    </h1>
+    <form method="post" action="">
+        {% csrf_token %}
+        <table id="table-not">
+            <tbody>
+                <tr>
+                    <td id="td-not"><input name="materia[]" type="text" size="30" placeholder="" value="" class="form-control"></td>
+                    <td id="td-not"><input name="nota[]" type="text" min="0" max="5" size="30" placeholder="" value="" required="" class="grade input-number form-control" oninput="validarNumeroFloat(this)"></td>
+                    <td id="td-not"><input name="creditos[]" type="text" size="30" placeholder="" value="" required="" class="input-number form-control"></td>
+                    <td><button type="button" id="delete-button" onclick="eliminarFila(this)">X</button></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <table id="table-not">
+            <tbody>
+                <tr>
+                    <button type="button" id="button-agregar" onclick="agregarFila()">Añadir Asignatura</button>
+                </tr>
+                <tr>
+                    <img src="https://i.ibb.co/JCv6FdN/Imagen-6.png" alt="Capymini" style="height: 75px; width: 75px; margin-left: 35px;">
+                </tr>
+                <tr>
+                    <img src="https://i.ibb.co/XSSjGHV/Imagen-5.png" alt="Capymini" style="height: 75px; width: 75px; margin-left: 35px;">
+                </tr>
+                <tr>
+                    <button type="submit" id="button-calcular">Calcular Promedio</button>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+
+    <div id="popup-message" style="display: none;">
+        <h1 id="promedio">PROMEDIO <span>{{promedio}}</span></h1>
+    </div>
+    
+
+    <script>
+        function eliminarFila(button) {
+            // Obtén la fila (<tr>) que contiene el botón
+            var fila = button.parentNode.parentNode;
+            // Elimina la fila
+            fila.remove();
+        }
+        
+        function agregarFila() {
+            var tabla = document.getElementById("table-not");
+            var fila = tabla.insertRow(-1); // Inserta una fila al final de la tabla
+
+            // Clona las celdas de la fila original
+            for (var i = 0; i < 3; i++) {
+                var celda = fila.insertCell(i);
+                var input = document.createElement("input");
+                if (i == 0) {
+                    input.name = "materia[]";
+                } else if (i == 1) {
+                    input.name = "nota[]";
+                } else if (i == 2) {
+                    input.name = "creditos[]";
+                }
+                input.type = "text";
+                input.size = 30;
+                input.className = "form-control";
+                celda.appendChild(input);
+            }
+
+            var celdaEliminar = fila.insertCell(3);
+            var botonEliminar = document.createElement("button");
+            botonEliminar.type = "button";
+            botonEliminar.id = "delete-button";
+            botonEliminar.innerHTML = "X";
+            botonEliminar.onclick = function() {
+                eliminarFila(botonEliminar);
+            };
+            celdaEliminar.appendChild(botonEliminar);
+        }
+        
+        function validarNumeroFloat(input) {
+            // Expresión regular para validar números decimales
+            var regex = /^[+-]?\d+(\.\d*)?$/;
+            if (!regex.test(input.value)) {
+                input.value = ""; 
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            var formulario = document.querySelector("form");
+            var popupMessage = document.getElementById("popup-message");
+            var modalContent = popupMessage.querySelector(".modal-content");
+            
+            formulario.addEventListener("submit", function(e) {
+                e.preventDefault(); // Evita el envío normal del formulario
+
+                // Realiza la lógica de cálculo y procesamiento del formulario aquí y luego envía una solicitud POST al servidor usando Fetch
+                fetch("", {
+                    method: "POST",
+                    body: new FormData(formulario),
+                })
+                .then(response => response.json())
+                .then(data => {
+                    // Maneja la respuesta JSON del servidor
+                    var promedio = data.promedio;
+                    console.log(promedio)
+
+                    // Actualiza el contenido del cuadro de diálogo con el valor del promedio
+                    popupMessage.innerHTML = "<h1 id='promedio'>PROMEDIO: <span id='promedio2'>" + promedio + "</span></h1>"
+
+                    // Muestra el mensaje emergente
+                    popupMessage.style.display = "block";
+                })
+                .catch(error => {
+                    // Maneja errores si es necesario
+                    console.error(error);
+                });
+            });
+        });
+
+
+    </script>
+</body>
+</html>
+{% endblock %}
