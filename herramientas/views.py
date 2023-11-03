@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect 
 from .models import Clase, Nota
 from .forms import ClaseForm, CalculadoraNotasForm
-from PruebaVocacional.models import Student
+from cuentas.models import Student
 from datetime import time, datetime, timedelta,date
 from django.http import JsonResponse
 

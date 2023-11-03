@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'PruebaVocacional',
     'chat',
     'herramientas',
+    'cuentas',
 ]
 
 MIDDLEWARE = [

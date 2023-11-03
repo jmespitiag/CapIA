@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
-from .models import Test, Student
+from .models import Test
+from cuentas.models import Student
 from .forms import TestForm, StudentForm
 
 
