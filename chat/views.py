@@ -4,14 +4,11 @@ from django.http import JsonResponse
 from django.utils import timezone
 from .models import Chat
 import openai
-from PruebaVocacional.models import Student
+from cuentas.models import Student
 
 
-with open('chat/api_key.txt', 'r') as api_key:
-    # Lee el contenido del api_key y guárdalo en una cadena
-    api_key = api_key.read()
 
-openai.api_key = api_key
+openai.api_key = "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"
 
 def chat(request, id_estudiante):
     student = Student.objects.get(id_estudiante=id_estudiante)
@@ -46,3 +43,4 @@ def chat(request, id_estudiante):
         return JsonResponse({'message': message, 'response': response})
     
     return render(request, 'chat.html', {'chats': chats,'student':student,'id_estudiante':id_estudiante})
+
