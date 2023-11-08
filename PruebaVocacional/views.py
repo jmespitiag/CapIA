@@ -2,25 +2,11 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
 from .models import Test
 from cuentas.models import Student
-from .forms import TestForm, StudentForm
+from .forms import TestForm
 
 
 
-def home(request,id_estudiante):
-    
-    return render(request,'home.html',{'id_estudiante': id_estudiante})
 
-def home_name(request):
-    if request.method == 'POST':
-        form = StudentForm(request.POST)
-        if form.is_valid():
-            estudiante = form.save()  
-            return redirect('home', id_estudiante=estudiante.id_estudiante)
-    else:
-        form = StudentForm()
-    return render(request, 'home_name.html', {'form': form})
-        
-        
         
         
         

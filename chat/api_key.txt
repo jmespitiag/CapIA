@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-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
-=======
+
 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
->>>>>>> martin
+

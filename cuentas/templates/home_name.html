@@ -23,18 +23,31 @@
             <div class="col-md-6" id="login-form-1" style="background: #dbb973">
                 <h4 id="welcomee" class="justify content-center pb-5">¡BIENVENIDO!</h4>
                 <div class="pt-5"></div>
-                <h6 id="ingresa_name"> Ingresa tú nombre</h6>
+                <h6 id="ingresa_name"> Ingresa a tú cuenta</h6>
                 <div class="d-flex justify-content-center pd-5 pt-5">
-                    <form method="post">
-                        {% csrf_token %}
-                        
-                        <input type="text" name="nombre">
-                        <div class="pt-5"></div>
-                        <button id="button_name" type="submit" class="btn btn-primary btn">Enviar</button>
+                    <form role="form" id="register-form" autocomplete="off">
+                        <div class="form-group">
+                            <label class='label_login' for="usuario">Usuario</label>
+                            <input type="text" class="form-control" id="usuario" name="usuario">
+                        </div>
+                        <div class="form-group">
+                            <label class='label_login' for="contraseña">Contraseña</label>
+                            <input type="password" class="form-control" id="contraseña" name="contraseña">
+                        </div>
+                        <button id="button_name" type="submit" class="btn btn-primary btn mb-3">Enviar</button>
+
                     </form>
+
+
+                   
+
+   
+
+                    
 					
 				</div>
-				
+
+ 
             </div>
             <div class="col-md-6" id="login-home-2">
                 <div id="box">
@@ -42,7 +55,18 @@
                     <h5  id="slogan">PARA ADELANTE Y CON PERRENQUE</h5>
                     <img class="img-thumbnail" style="width: 50px; height: 50px; margin-left: 50px;" src="https://i.ibb.co/bWW0w50/descarga.png" alt="Capy_Love">
                 </div>
-                
+                <div class="m-2">
+                </div>
+
+                <div class="col-mt-5">
+
+                    <h7 id="ingresa_name2" class='my-2'> ¿No tienes una cuenta? </h7>
+                    <div class="m-2">
+                    </div>
+    
+                    <a id = 'button_name2' href="{% url 'registro' %}" id="button" type="button" class="btn btn-primary btn">¡Regístrate!</a>
+                </div>
+    
             </div>
         </div>
 

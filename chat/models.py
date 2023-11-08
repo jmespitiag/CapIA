@@ -1,6 +1,6 @@
 from django.db import models
 from django.db import models
-from PruebaVocacional.models import Student
+from cuentas.models import Student
 
 # Create your models here.
 

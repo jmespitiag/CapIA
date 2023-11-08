@@ -1,4 +1,4 @@
-from .models import Test, Student
+from .models import Test
 from django import forms
 from django.forms import ValidationError, widgets
 
@@ -12,8 +12,3 @@ class TestForm(forms.ModelForm):
             'nombre': forms.HiddenInput(),
         }
 
-class StudentForm(forms.ModelForm):
-    class Meta:
-        model = Student
-        fields = ['nombre']
-    nombre = forms.CharField(required=True)

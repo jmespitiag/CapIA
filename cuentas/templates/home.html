@@ -1,3 +1,4 @@
+{% extends 'base.html' %}
 {% load static %}
 
 <!DOCTYPE html>
@@ -14,31 +15,34 @@
     
 </head>
 <body>
-    <div class="container" id="login-container">
+    {% block content %}
+    <div class="" id="login-container">
         <div class="row">
             <div class="col-md-6" id="login-form-1">
-                <img class="img-thumbnail" id="Capy" src="https://i.ibb.co/NK3byqR/Imagen-1.png" alt="capý">
+                <img class="img-thumbnail" id="Capy" src="https://i.ibb.co/bs0k5Yy/Whats-App-Image-2023-11-04-at-12-35-25-1.jpg" alt="capý">
             </div>
             <div class="col-md-6" id="login-form-2">
+                <div id='box2'>
                 
-                <h1 id="hello" class="pb-5">HOLA, SOY CAPY</h1>
-				
-				<div class="d-flex justify-content-center pd-5 pt-5">
-					<h4 class id="text">Elige una opción <br> para continuar </h4>
+                <h1 id="hello" class="pb-3">!Hola Amigo!</h1>
+		
+				<div class="d-flex justify-content-center pd-2 pt-2">
+					<h4 class id="text">Soy Capy <br> ¿Cómo te sientes hoy? </h4>
 					
 				</div>
 				
 				<br>
-				<div class="d-flex justify-content-center">
-					<a href="{% url 'test' id_estudiante=id_estudiante %}" id="button" type="button" class="btn btn-primary btn">¡Quiero Estudiar!</a>
-					
-					<a href="{% url 'chat' id_estudiante=id_estudiante %}" id="button" type="button" class="btn btn-secondary">¡Soy Estudiante!</a>
+				<div class="d-flex justify-content-center">					
+					<a href="{% url 'chat' id_estudiante=id_estudiante %}" id="button" type="button" class="btn btn-secondary">¿Quieres hablar?</a>
 				</div>
-				
+                </div>
+          
+            </div>
                 
             </div>
         </div>
     </div>
+    {% endblock content %}
 </body>
 </html>
 

@@ -1,10 +1,11 @@
 from django.db import models
+from cuentas.models import Student
 
 
 class Test(models.Model):
     
     nombre = models.CharField(max_length=25)
-    id_estudiante = models.ForeignKey("Student", verbose_name=("ID de estudiante"), on_delete=models.CASCADE)
+    id_estudiante = models.ForeignKey(Student, verbose_name=("ID de estudiante"), on_delete=models.CASCADE)
     respuesta1 = models.IntegerField(default=00)
     respuesta2 = models.IntegerField(default=00)
     respuesta3 = models.IntegerField(default=00)
@@ -41,11 +42,4 @@ class Test(models.Model):
         return self.nombre
     
     
-class Student(models.Model):
-    
-    nombre = models.CharField(max_length=25)
-    id_estudiante = models.AutoField(primary_key=True)
-    
-    def __str__(self):
-        return self.nombre
-    
+

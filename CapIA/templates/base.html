@@ -59,7 +59,7 @@
             <div class="dropdown-content">
               <a id='choice' class="dropdown-item" href="{% url 'horario' id_estudiante=id_estudiante  %}">Horario</a>
               <a id='choice' class="dropdown-item" href="{% url 'metodos-estudio' id_estudiante=id_estudiante  %}">Metodos de estudio</a>
-              <a id='choice' class="dropdown-item" href="{% url 'calculaNota' id_estudiante=id_estudiante  %}">Calcular promedio</a>
+              <a id='choice' class="dropdown-item" href="{% url 'calcular-promedio' id_estudiante=id_estudiante  %}">Calcular promedio</a>
               <a id='choice' class="dropdown-item" href="{% url 'chat' id_estudiante=id_estudiante  %}">Chat</a>
               
             </div>
@@ -67,10 +67,10 @@
       </div>
     </div>
   </nav>
-  <div>
+
     {% block content %}
     {% endblock content %}
-  </div>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-AZyCprH6Rp5iONEXo40PZZbUdZvt5CA4wDMlhksaxTI2M9OGnHk8fYq6nUz5wXjD" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+Jnujsl5+zW/N41EPi8vh4Uqhrj3i2v5X/kT3JW5SwUqOYb" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-FSTS5xJVRr6pOtKx8F+Tzr5eg4sZbuz5D51BpETKUyZdY5p5AEb6WiOOf9ylIcUwX" crossorigin="anonymous"></script>
