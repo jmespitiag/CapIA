@@ -854,4 +854,10 @@
   border: 2px solid #0fae13;
   padding: 2rem;
 }
+
+#profile_letter {
+  font-size: 'Roboto';
+  font-weight: bold;
+  color: #dbb973;
+}
 /*# sourceMappingURL=styles.css.map */

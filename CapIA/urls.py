@@ -22,7 +22,7 @@ urlpatterns = [
     path('horario/agregar/<int:id_estudiante>', herramientas.agregar_clase , name='agregar_clase' ),
     path('calcular-promedio/<int:id_estudiante>', herramientas.calcular_promedio, name="calcular-promedio"),
     path('registro/',cuentas.register, name='registro'),
-
+    path('profile/<int:id_estudiante>',cuentas.profile,name='perfil'),
     path('chat/<int:id_estudiante>',chat.chat,name="chat"),
     path('metodos-estudio/<int:id_estudiante>', herramientas.metodos_estudio, name="metodos-estudio")
 

@@ -10,5 +10,8 @@ class TestForm(forms.ModelForm):
         widgets ={
             'id_estudiante': forms.HiddenInput(),
             'nombre': forms.HiddenInput(),
+            'area_test' : forms.HiddenInput(),
+            'area' : forms.HiddenInput(),
+            
         }
 

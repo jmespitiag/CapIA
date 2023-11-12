@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Student
-from .forms import StudentForm, StudentRegister
+from PruebaVocacional.models import Test
+from .forms import StudentForm, StudentRegister, StudentChange
 from django.contrib.auth import authenticate, login
 
 
@@ -18,6 +19,9 @@ def home_name(request):
             if user is not None:
                 login(request, user)
                 return redirect('home', id_estudiante=user.id_estudiante) 
+        else:
+            print(form.errors)
+            return render(request, 'home_name_errors.html', {'form': form})
     else:
         form = StudentForm()
 
@@ -41,5 +45,26 @@ def register(request):
         initial_data = {'carrera': 'N/A'}
         form = StudentRegister(initial_data)
     return render(request,'register.html',{'form':form})
+
+def profile(request,id_estudiante):
+    user = Student.objects.get(id_estudiante=id_estudiante)
+    if user.universitario:
+        return render(request,'profile.html',{'user':user})
+    else:
+        if request.method == 'POST':
+            test = Test.objects.get(id_estudiante=user)
+            form = StudentChange(request.POST,instance=test)
+            if form.is_valid():
+                test.area = form.cleaned_data['area']
+                test.save()
+                user.universitario = True
+                user.save()
+                return render(request,'profile.html',{'user':user})
+            else:
+                print(form.errors)
         
-        
+        else:
+            test = Test.objects.get(id_estudiante=user)
+            form = StudentChange(instance=test)
+        return render(request,'profile.html',{'user':user, 'form':form})
+            

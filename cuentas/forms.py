@@ -1,4 +1,5 @@
 from .models import Student
+from PruebaVocacional.models import Test
 from django import forms
 from django.forms import ValidationError, widgets
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
@@ -28,7 +29,12 @@ class StudentRegister(UserCreationForm):
 
         return cleaned_data
 
+class StudentChange(forms.ModelForm):
     
+    class Meta:
+        model = Test
+        fields = ('area',)
+
 
 
         

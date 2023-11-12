@@ -3,6 +3,15 @@ from cuentas.models import Student
 
 
 class Test(models.Model):
+    options = [
+        ('Administrativas y contables','Administrativas y contables'),
+        ('Humanísticas, Ciencias Jurídicas y Sociales','Humanísticas, Ciencias Jurídicas y Sociales'),
+        ('Artísticas','Artísticas'),
+        ('Ciencias de la salud','Ciencias de la salud'),
+        ('Ingenierías, carreras técnicas y computación','Ingenierías, carreras técnicas y computación'),
+        ('Ciencias exactas','Ciencias exactas'),
+        ('N/A','N/A')
+    ]
     
     nombre = models.CharField(max_length=25)
     id_estudiante = models.ForeignKey(Student, verbose_name=("ID de estudiante"), on_delete=models.CASCADE)
@@ -37,6 +46,8 @@ class Test(models.Model):
     respuesta29 = models.IntegerField(default=00)
     respuesta30 = models.IntegerField(default=00)
     id = models.AutoField(primary_key=True)
+    area_test = models.CharField(choices=options,default='N/A',max_length=50)
+    area = models.CharField(choices=options,default='N/A',max_length=50)
     
     def __str__(self):
         return self.nombre

@@ -27,6 +27,8 @@ def answers(request,id_estudiante):
             form = form.save(commit=False)
             form.id_estudiante = student
             form.nombre = student.nombre
+            form.area_test = 'N/A'
+            form.area = 'N/A'
             form.save()
             return redirect('result', id_estudiante=id_estudiante)
         else:
@@ -95,5 +97,8 @@ def result(request,id_estudiante):
         percentage = (puntos[clave]/total_puntos)*100
         percentage = format(percentage, '.2f')
         ranking.append((area,percentage))
+    test.area_test = ranking[0][0]
+    test.save()
+    print(ranking[0][0])
         
     return render(request,'result.html',{'id_estudiante':id_estudiante,'nombre':test.nombre,'ranking':ranking})
