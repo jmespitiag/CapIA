@@ -24,8 +24,8 @@ urlpatterns = [
     path('registro/',cuentas.register, name='registro'),
     path('profile/<int:id_estudiante>',cuentas.profile,name='perfil'),
     path('chat/<int:id_estudiante>',chat.chat,name="chat"),
-    path('metodos-estudio/<int:id_estudiante>', herramientas.metodos_estudio, name="metodos-estudio")
-
+    path('metodos-estudio/<int:id_estudiante>', herramientas.metodos_estudio, name="metodos-estudio"),
+    path('analisis/<int:id_estudiante>', test.data, name="analisis")
 ]
 
 if settings.DEBUG:

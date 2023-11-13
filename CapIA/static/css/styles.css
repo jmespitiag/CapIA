@@ -1,18 +1,16 @@
 @charset "UTF-8";
 @font-face {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   src: url("../Capy/fonts/Roboto-BlackItalic.ttf");
   font-weight: bold;
   font-style: bold;
 }
-
 @font-face {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   src: url("../Capy/fonts/Roboto-Regular.ttf");
   font-weight: normal;
   font-style: normal;
 }
-
 #row_test {
   border: 2px solid #0fae13;
 }
@@ -20,34 +18,32 @@
 #result_tittle {
   color: #0fae13;
   font-weight: 500;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: bold;
 }
 
 #test_hello {
-  background: -webkit-gradient(linear, left top, left bottom, from(#0fae13), to(#7c1094));
   background: linear-gradient(#0fae13, #7c1094);
   -webkit-background-clip: text;
   color: transparent;
   font-weight: 500;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: bold;
 }
 
 #text-result {
   color: #40444d;
   font-weight: 500;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: bold;
 }
 
 #test_exp {
-  background: -webkit-gradient(linear, left top, left bottom, from(#7c1094), to(#0fae13));
   background: linear-gradient(#7c1094, #0fae13);
   -webkit-background-clip: text;
   color: transparent;
   font-weight: 500;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: bold;
 }
 
@@ -55,6 +51,12 @@
   width: 2.5rem;
   height: 2.5rem;
   border: 2.5px solid #0fae13;
+}
+
+#miGraficoDeBarra {
+  width: 40px;
+  height: 40px;
+  aspect-ratio: auto;
 }
 
 #casilla2 {
@@ -76,140 +78,102 @@
 }
 
 #login-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   height: 100vh;
 }
 
 #login-form-1 {
   padding: 9%;
   background: #0fae13;
-  -webkit-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
-          box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
   color: #fff;
 }
 
 #login-form-2 {
   padding: 9%;
-  background: #fff;
-  /* Cambia el color de fondo a blanco */
-  -webkit-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
-          box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
-  color: #282726;
-  /* Cambia el color del texto */
+  background: #fff; /* Cambia el color de fondo a blanco */
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+  color: #282726; /* Cambia el color del texto */
 }
 
 #login-home-2 {
   padding: 9%;
   background: #ffffff;
-  -webkit-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
-          box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
   color: #fff;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 #met-form-1 {
   padding: 9%;
   background: #dbb973;
-  -webkit-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
-          box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
   color: #fff;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 #met-form-2 {
   padding: 9%;
-  background: #fff;
-  /* Cambia el color de fondo a blanco */
-  -webkit-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
-          box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
-  color: #282726;
-  /* Cambia el color del texto */
+  background: #fff; /* Cambia el color de fondo a blanco */
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+  color: #282726; /* Cambia el color del texto */
 }
 
 #met-form-3 {
   padding: 4%;
-  background: #fff;
-  /* Cambia el color de fondo a blanco */
-  -webkit-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
-          box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
-  color: #282726;
-  /* Cambia el color del texto */
+  background: #fff; /* Cambia el color de fondo a blanco */
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+  color: #282726; /* Cambia el color del texto */
 }
 
 #met-form-4 {
   padding: 9%;
   background: #dbb973;
-  -webkit-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
-          box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
   color: #fff;
 }
 
 #met-form-5 {
   padding: 9%;
   background: #dbb973;
-  -webkit-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
-          box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
   color: #fff;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 #met-form-6 {
   padding: 4%;
-  background: #fff;
-  /* Cambia el color de fondo a blanco */
-  -webkit-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
-          box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
-  color: #282726;
-  /* Cambia el color del texto */
+  background: #fff; /* Cambia el color de fondo a blanco */
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+  color: #282726; /* Cambia el color del texto */
 }
 
 #met-form-7 {
   padding: 4%;
-  background: #fff;
-  /* Cambia el color de fondo a blanco */
-  -webkit-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
-          box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
-  color: #282726;
-  /* Cambia el color del texto */
+  background: #fff; /* Cambia el color de fondo a blanco */
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+  color: #282726; /* Cambia el color del texto */
 }
 
 #met-form-8 {
   padding: 9%;
   background: #dbb973;
-  -webkit-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
-          box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
   color: #fff;
 }
 
 #Capy {
-  -webkit-transform: scaleX(-1);
-          transform: scaleX(-1);
+  transform: scaleX(-1);
 }
 
 #hello {
   color: #0fae13;
   font-weight: 500;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: bold;
 }
 
@@ -217,7 +181,23 @@
   margin-left: 115px;
   color: #0fae13;
   font-weight: 500;
-  font-family: 'Roboto';
+  font-family: "Roboto";
+  font-weight: bold;
+}
+
+#graficas-title {
+  margin-left: 300px;
+  color: #dbb973;
+  font-weight: 500;
+  font-family: "Roboto";
+  font-weight: bold;
+}
+
+#graficas-text {
+  margin-left: 330px;
+  color: #0fae13;
+  font-weight: 500;
+  font-family: "Roboto";
   font-weight: bold;
 }
 
@@ -226,7 +206,7 @@
   margin-left: 115px;
   color: #dbb973;
   font-weight: 500;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: bold;
 }
 
@@ -235,7 +215,7 @@
   margin-left: 115px;
   color: #0fae13;
   font-weight: 500;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: bold;
 }
 
@@ -243,7 +223,7 @@
   margin-left: 175px;
   color: #dbb973;
   font-weight: 500;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: bold;
   margin-right: 175px;
 }
@@ -251,7 +231,7 @@
 #met_title {
   color: #dbb973;
   font-weight: 500;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: bold;
   margin-left: 90px;
 }
@@ -259,23 +239,21 @@
 #bienvenido {
   color: #dbb973;
   font-weight: 400;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: bold;
   margin-left: 50px;
 }
 
 #text {
   color: #40444d;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: bold;
 }
 
 #slogan {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   color: #dbb973;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: bold;
 }
 
@@ -291,14 +269,14 @@
 
 #text-met {
   color: #40444d;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: bold;
   font-size: 20px;
 }
 
 #text-met-sub {
   color: #0fae13;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: bold;
   font-size: 20px;
 }
@@ -309,7 +287,7 @@
   text-align: center;
   outline: white;
   color: white;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: bold;
 }
 
@@ -319,7 +297,7 @@
   text-align: center;
   outline: white;
   color: white;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: bold;
   margin-left: 50px;
   border-radius: 10px;
@@ -331,7 +309,7 @@
   text-align: center;
   outline: white;
   color: white;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: bold;
   margin-left: 50px;
   border-radius: 10px;
@@ -345,7 +323,7 @@
   text-align: center;
   outline: white;
   color: white;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: bold;
 }
 
@@ -355,7 +333,7 @@
   text-align: center;
   outline: white;
   color: white;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: bold;
 }
 
@@ -365,7 +343,7 @@
   text-align: center;
   outline: white;
   color: white;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: bold;
   border-radius: 10px;
   padding: 5px;
@@ -377,7 +355,7 @@
   text-align: center;
   outline: white;
   color: white;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: bold;
 }
 
@@ -387,7 +365,7 @@
   text-align: center;
   outline: white;
   color: white;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: bold;
 }
 
@@ -397,7 +375,7 @@
   text-align: center;
   outline: white;
   color: white;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: bold;
 }
 
@@ -407,12 +385,12 @@
   text-align: center;
   outline: white;
   color: white;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: bold;
 }
 
 #Capy_nav {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: bold;
   color: #dbb973;
 }
@@ -427,7 +405,7 @@
 }
 
 #Home a {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: bold;
   color: white;
   background-color: #dbb973;
@@ -443,12 +421,12 @@
 }
 
 #welcome {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: bold;
 }
 
 #Exp {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: bold;
 }
 
@@ -467,24 +445,24 @@
 #test_button {
   background-color: white;
   color: #0fae13;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: bold;
 }
 
 #max {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: bold;
   color: #0fae13;
 }
 
 #min {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: bold;
   color: #7c1094;
 }
 
 #question {
-  font-size: 'Roboto';
+  font-size: "Roboto";
   font-weight: bold;
   color: black;
   text-align: center;
@@ -495,27 +473,27 @@
 }
 
 #description {
-  font-size: 'Roboto';
+  font-size: "Roboto";
   font-weight: bold;
   color: #40444d;
   text-align: center;
 }
 
 #nombres {
-  font-size: 'Roboto';
+  font-size: "Roboto";
   font-weight: bold;
   color: black;
   text-align: center;
 }
 
 #test_1 {
-  font-size: 'Roboto';
+  font-size: "Roboto";
   font-weight: bold;
   color: black;
 }
 
 #test_2 {
-  font-size: 'Roboto';
+  font-size: "Roboto";
   font-weight: bold;
   color: #40444d;
 }
@@ -523,7 +501,7 @@
 #send {
   background-color: white;
   color: #0fae13;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: bold;
 }
 
@@ -533,35 +511,40 @@
   text-align: center;
   outline: white;
   color: #dbb973;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: bold;
 }
 
 #welcomee {
-  font-size: 'Roboto';
+  font-size: "Roboto";
   font-weight: bold;
   color: white;
 }
 
 #ingresa_name {
-  font-size: 'Roboto';
+  font-size: "Roboto";
   font-weight: bold;
   color: white;
 }
 
 #tittle_chat {
-  font-size: 'Roboto';
+  font-size: "Roboto";
   font-weight: bold;
   color: #0fae13;
 }
 
 #text_chat {
-  font-size: 'Roboto';
+  font-size: "Roboto";
   font-weight: bold;
   color: #806b39;
 }
 
 #Capy_Hi {
+  width: 6rem;
+  height: 6rem;
+}
+
+#Capy_Hi3 {
   width: 6rem;
   height: 6rem;
 }
@@ -589,17 +572,15 @@
 #celd-in {
   color: white;
   background-color: #0fae13;
-  font-size: 'Roboto';
+  font-size: "Roboto";
   font-weight: bold;
   border: 1px solid #0fae13;
 }
 
 #hora {
-  font-size: 'Roboto';
+  font-size: "Roboto";
   font-weight: bold;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   border: 1px solid #806b39;
   background-color: #dbb973;
   font-weight: bold;
@@ -607,11 +588,9 @@
 }
 
 #dia {
-  font-size: 'Roboto';
+  font-size: "Roboto";
   font-weight: bold;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 #horario {
@@ -619,7 +598,7 @@
 }
 
 #horario a {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: bold;
   color: white;
   background-color: #dbb973;
@@ -627,204 +606,150 @@
 }
 
 #añadir_button {
-  background-color: #dbb973;
-  /* Color de fondo principal */
+  background-color: #dbb973; /* Color de fondo principal */
   border: 2px solid;
-  border-color: #806b39;
-  /* Color del borde */
-  color: #806b39;
-  /* Color del texto */
-  padding: 5px 10px;
-  /* Relleno (padding) del botón */
-  border-radius: 4px;
-  /* Bordes redondeados */
-  text-align: center;
-  /* Alineación del texto */
-  text-decoration: none;
-  /* Estilo de subrayado para enlaces */
-  display: inline-block;
-  /* Hacer que el botón sea un elemento en línea */
-  font-size: 16px;
-  /* Tamaño de fuente */
-  cursor: pointer;
-  /* Cambiar el cursor al pasar sobre el botón */
+  border-color: #806b39; /* Color del borde */
+  color: #806b39; /* Color del texto */
+  padding: 5px 10px; /* Relleno (padding) del botón */
+  border-radius: 4px; /* Bordes redondeados */
+  text-align: center; /* Alineación del texto */
+  text-decoration: none; /* Estilo de subrayado para enlaces */
+  display: inline-block; /* Hacer que el botón sea un elemento en línea */
+  font-size: 16px; /* Tamaño de fuente */
+  cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
   margin-left: 2rem;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: bold;
 }
 
 #clase_message {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: bold;
 }
 
 #login-form-3 {
   padding: 9%;
   background: #0fae13;
-  -webkit-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
-          box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
   color: #fff;
 }
 
 #button_add_class {
-  background-color: #0fae13;
-  /* Color de fondo principal */
+  background-color: #0fae13; /* Color de fondo principal */
   border: 2px solid;
-  border-color: #0fae13;
-  /* Color del borde */
-  color: white;
-  /* Color del texto */
-  padding: 10px 20px;
-  /* Relleno (padding) del botón */
-  border-radius: 7rem;
-  /* Bordes redondeados */
-  text-align: center;
-  /* Alineación del texto */
-  text-decoration: none;
-  /* Estilo de subrayado para enlaces */
-  display: inline-block;
-  /* Hacer que el botón sea un elemento en línea */
-  font-size: 16px;
-  /* Tamaño de fuente */
-  cursor: pointer;
-  /* Cambiar el cursor al pasar sobre el botón */
+  border-color: #0fae13; /* Color del borde */
+  color: white; /* Color del texto */
+  padding: 10px 20px; /* Relleno (padding) del botón */
+  border-radius: 7rem; /* Bordes redondeados */
+  text-align: center; /* Alineación del texto */
+  text-decoration: none; /* Estilo de subrayado para enlaces */
+  display: inline-block; /* Hacer que el botón sea un elemento en línea */
+  font-size: 16px; /* Tamaño de fuente */
+  cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
   margin-left: 2rem;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: bold;
 }
 
 #login-form-4 {
   padding: 9%;
-  background: #fff;
-  /* Cambia el color de fondo a blanco */
-  -webkit-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
-          box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
-  color: #282726;
-  /* Cambia el color del texto */
+  background: #fff; /* Cambia el color de fondo a blanco */
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+  color: #282726; /* Cambia el color del texto */
 }
 
 #login-form-4 div {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: bold;
 }
 
 #txt {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: bold;
   color: #dbb973;
 }
 
 #txt a {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: bold;
 }
 
 #choice {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: bold;
   color: #dbb973;
 }
 
 #txt_2 {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: bold;
   color: #0fae13;
 }
 
 #choice2 {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: bold;
   color: #0fae13;
 }
 
 #añadir_button2 {
-  background-color: #dbb973;
-  /* Color de fondo principal */
+  background-color: #dbb973; /* Color de fondo principal */
   border: 1px solid;
-  border-color: black;
-  /* Color del borde */
-  color: white;
-  /* Color del texto */
-  padding: 5px 10px;
-  /* Relleno (padding) del botón */
-  border-radius: 4px;
-  /* Bordes redondeados */
-  text-align: center;
-  /* Alineación del texto */
-  text-decoration: none;
-  /* Estilo de subrayado para enlaces */
-  display: inline-block;
-  /* Hacer que el botón sea un elemento en línea */
-  font-size: 16px;
-  /* Tamaño de fuente */
-  cursor: pointer;
-  /* Cambiar el cursor al pasar sobre el botón */
+  border-color: black; /* Color del borde */
+  color: white; /* Color del texto */
+  padding: 5px 10px; /* Relleno (padding) del botón */
+  border-radius: 4px; /* Bordes redondeados */
+  text-align: center; /* Alineación del texto */
+  text-decoration: none; /* Estilo de subrayado para enlaces */
+  display: inline-block; /* Hacer que el botón sea un elemento en línea */
+  font-size: 16px; /* Tamaño de fuente */
+  cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
   margin-left: 2rem;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: bold;
 }
 
 #notas_tittle {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: bold;
 }
 
 #add-button_nota {
-  background-color: #7c1094;
-  /* Color de fondo principal */
+  background-color: #7c1094; /* Color de fondo principal */
   border: 1px solid;
-  border-color: white;
-  /* Color del borde */
-  color: white;
-  /* Color del texto */
-  padding: 5px 10px;
-  /* Relleno (padding) del botón */
-  border-radius: 4px;
-  /* Bordes redondeados */
-  text-align: center;
-  /* Alineación del texto */
-  text-decoration: none;
-  /* Estilo de subrayado para enlaces */
-  display: inline-block;
-  /* Hacer que el botón sea un elemento en línea */
-  font-size: 16px;
-  /* Tamaño de fuente */
-  cursor: pointer;
-  /* Cambiar el cursor al pasar sobre el botón */
+  border-color: white; /* Color del borde */
+  color: white; /* Color del texto */
+  padding: 5px 10px; /* Relleno (padding) del botón */
+  border-radius: 4px; /* Bordes redondeados */
+  text-align: center; /* Alineación del texto */
+  text-decoration: none; /* Estilo de subrayado para enlaces */
+  display: inline-block; /* Hacer que el botón sea un elemento en línea */
+  font-size: 16px; /* Tamaño de fuente */
+  cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
   margin-left: 1rem;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: bold;
 }
 
 #calcular-button {
-  background-color: #0fae13;
-  /* Color de fondo principal */
+  background-color: #0fae13; /* Color de fondo principal */
   border: 1px solid;
-  border-color: white;
-  /* Color del borde */
-  color: white;
-  /* Color del texto */
-  padding: 5px 10px;
-  /* Relleno (padding) del botón */
-  border-radius: 4px;
-  /* Bordes redondeados */
-  text-align: center;
-  /* Alineación del texto */
-  text-decoration: none;
-  /* Estilo de subrayado para enlaces */
-  display: inline-block;
-  /* Hacer que el botón sea un elemento en línea */
-  font-size: 16px;
-  /* Tamaño de fuente */
-  cursor: pointer;
-  /* Cambiar el cursor al pasar sobre el botón */
+  border-color: white; /* Color del borde */
+  color: white; /* Color del texto */
+  padding: 5px 10px; /* Relleno (padding) del botón */
+  border-radius: 4px; /* Bordes redondeados */
+  text-align: center; /* Alineación del texto */
+  text-decoration: none; /* Estilo de subrayado para enlaces */
+  display: inline-block; /* Hacer que el botón sea un elemento en línea */
+  font-size: 16px; /* Tamaño de fuente */
+  cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
   margin-left: 1rem;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: bold;
 }
 
 #button_delete {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: bold;
 }
 
@@ -834,18 +759,18 @@
   text-align: center;
   outline: white;
   color: white;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: bold;
 }
 
 #ingresa_name2 {
-  font-size: 'Roboto';
+  font-size: "Roboto";
   font-weight: bold;
   color: #dbb973;
 }
 
 #label_login {
-  font-size: 'Roboto';
+  font-size: "Roboto";
   font-weight: bold;
   color: white;
 }
@@ -856,8 +781,7 @@
 }
 
 #profile_letter {
-  font-size: 'Roboto';
+  font-size: "Roboto";
   font-weight: bold;
   color: #dbb973;
-}
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */

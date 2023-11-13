@@ -59,6 +59,11 @@
     height: 2.5rem;
     border: 2.5px solid $success;
 }
+#miGraficoDeBarra {
+    width: 40px;
+    height: 40px;
+    aspect-ratio: auto;
+  }
 
 #casilla2{
     width: 1.8rem;
@@ -182,6 +187,22 @@
 
 #calcular-title{
     margin-left: 115px;
+    color: $success;
+    font-weight: 500;
+    font-family: 'Roboto' ;
+    font-weight: bold;
+}
+
+#graficas-title{
+    margin-left: 300px;
+    color: #dbb973;
+    font-weight: 500;
+    font-family: 'Roboto' ;
+    font-weight: bold;
+}
+
+#graficas-text{
+    margin-left: 330px;
     color: $success;
     font-weight: 500;
     font-family: 'Roboto' ;
@@ -551,6 +572,13 @@
     width: 6rem;
     height: 6rem;
 }
+
+#Capy_Hi3{
+    width: 6rem;
+    height: 6rem;
+}
+
+
 
 #table {
     border-collapse: separate;

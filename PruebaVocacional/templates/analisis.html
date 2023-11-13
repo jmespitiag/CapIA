@@ -1,0 +1,164 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Analisis de datos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}"> 
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+    <div class="row" style="margin-left: 380px; margin-bottom: 50px;">
+        <div class="col-md-6">
+            <h1 id="calcular-title">
+                Bienvenido al análisis de datos 
+            </h1>
+            
+        </div>
+        <div class="col-md-1"><img id="Capy_Hi" src="https://i.ibb.co/280N5rJ/Imagen-3.png" alt="Capy_sayingHi"></div>
+    </div>
+
+    <div style="margin-left: 10px;">
+        <h2 id="graficas-title" >Efectividad del test en {{area}}</h2>
+    </div>
+    
+    <div>
+        <canvas id="miGraficoDeBarras" style="width: 220; height: 200px;" ></canvas>
+    </div>
+
+    <div class="col-md-8" style="margin-left: 75px;">
+        <p id="graficas-text">El test acierta cuando las personas que tienen como resultado del test {{area}} finalmente estudian en dicha area</p>
+    </div>
+
+    <div class="col-md-9" style="margin-left: 75px;">
+        <h2 id="graficas-title">¿Que areas estudian los que obtienen resultado de {{area}}?</h2>
+    </div>
+
+    <div>
+        <canvas id="miGraficoDeBarras2" style="width: 220; height:500" ></canvas>
+    </div>
+
+    
+    
+    
+    
+
+    <script>
+       
+        var porcentaje_coincidencia = "{{ coincidencia }}";
+        var porcentaje_fallo = "{{ fallo }}";
+        var admin = "{{admin}}";
+        var sociales = "{{sociales}}";
+        var artes = "{{artes}}";
+        var salud = "{{salud}}";
+        var ing = "{{ing}}";
+        var exactas = "{{exactas}}";
+
+
+        var ctx = document.getElementById("miGraficoDeBarras").getContext("2d");
+        var ctx2 = document.getElementById("miGraficoDeBarras2").getContext("2d");
+        
+        var data = {
+            labels: ["Aciertos del test en %", "Fallos del test en %"],
+            datasets: [
+                {
+                    backgroundColor: ["#0fae13", '#806b39'],
+                    borderColor: ["#0fae13", '#806b39'],
+                    borderWidth: 1,
+                    data: [porcentaje_coincidencia, porcentaje_fallo],
+                },
+            ]
+        };
+
+        var data2 = {
+            labels: ["Administrativas y contables", 'Humanísticas, Ciencias Jurídicas y Sociales', 'Artísticas', 'Ciencias de la salud', 'Ingenierías, carreras técnicas y computación', 'Ciencias exactas'],
+            datasets: [
+                {
+                    label: "Administrativas y contables",
+                    backgroundColor: "#007bff",
+                    borderColor: "#007bff",
+                    borderWidth: 1,
+                    data: [admin,0,0,0,0,0],
+                },
+                {
+                    label: 'Humanísticas, Ciencias Jurídicas y Sociales',
+                    backgroundColor: "#dc3545",
+                    borderColor: "#dc3545",
+                    borderWidth: 1,
+                    data: [0,sociales,0,0,0,0],
+                },
+                {
+                    label: 'Artísticas',
+                    backgroundColor: "#20c997",
+                    borderColor: "#20c997",
+                    borderWidth: 1,
+                    data: [0,0,artes,0,0,0],
+                },
+                {
+                    label: 'Ciencias de la salud',
+                    backgroundColor: "#ffc107",
+                    borderColor: "#ffc107",
+                    borderWidth: 1,
+                    data: [0,0,0,salud,0,0],
+                },
+                {
+                    label: 'Ingenierías, carreras técnicas y computación',
+                    backgroundColor: "#6610f2",
+                    borderColor: "#6610f2",
+                    borderWidth: 1,
+                    data: [0,0,0,0,ing,0],
+                },
+                {
+                    label: 'Ciencias exactas',
+                    backgroundColor: "#6c757d",
+                    borderColor: "#6c757d",
+                    borderWidth: 1,
+                    data: [0,0,0,0,0,exactas],
+                }
+            ]
+        };
+
+    
+    
+    
+        var myBarChart = new Chart(ctx, {
+            type: "pie",
+            data: data,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                    },
+    
+                },
+                maintainAspectRatio: false,
+                width: 500,
+                height: 50
+
+            }
+        });
+
+        var myBarChart2 = new Chart(ctx2, {
+            type: "bar",
+            data: data2,
+            options: {
+                scales: {
+                    x: {
+                        barPercentage: 100, // 1.0 centra las barras
+                    },
+                },
+                maintainAspectRatio: false,
+            }
+        });
+    </script>
+    
+    
+</body>
+</html>
+{% endblock %}

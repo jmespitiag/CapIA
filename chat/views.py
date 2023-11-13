@@ -7,8 +7,10 @@ import openai
 from cuentas.models import Student
 
 
+with open('chat/api_key.txt', 'r') as api_key:
+            key = api_key.read()
 
-openai.api_key = "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"
+openai.api_key = key
 
 def chat(request, id_estudiante):
     student = Student.objects.get(id_estudiante=id_estudiante)

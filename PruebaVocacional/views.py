@@ -102,3 +102,29 @@ def result(request,id_estudiante):
     print(ranking[0][0])
         
     return render(request,'result.html',{'id_estudiante':id_estudiante,'nombre':test.nombre,'ranking':ranking})
+
+def data(request, id_estudiante):
+    student = Student.objects.get(id_estudiante=id_estudiante)
+    test_student = Test.objects.get(id_estudiante=student)
+    area_student = test_student.area_test
+    dates = Test.objects.filter(area_test=area_student)
+    coincidencia=0
+    fallo=0
+    for t in dates:
+        print()
+        if t.area_test == t.area:
+            coincidencia=coincidencia+1
+        else:
+            fallo=fallo+1
+    total = coincidencia + fallo
+    porcentaje_coincidencia = (coincidencia/total)*100
+    porcentaje_fallo = (fallo/total)*100
+    print(total, coincidencia, fallo)
+
+    areas = ['Administrativas y contables', 'Humanísticas, Ciencias Jurídicas y Sociales', 'Artísticas', 'Ciencias de la salud', 'Ingenierías, carreras técnicas y computación', 'Ciencias exactas']
+
+    results={}
+    for area in areas:
+        results[area] = len(Test.objects.filter(area_test=area_student, area=area))
+
+    return render(request, 'analisis.html', {'id_estudiante': id_estudiante, 'coincidencia': porcentaje_coincidencia, 'fallo': porcentaje_fallo, 'area': area_student, 'admin': results['Administrativas y contables'], 'sociales': results['Humanísticas, Ciencias Jurídicas y Sociales'], 'artes': results['Artísticas'], 'salud': results['Ciencias de la salud'], 'ing': results['Ingenierías, carreras técnicas y computación'], 'exactas': results['Ciencias exactas']})

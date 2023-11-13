@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'chat',
     'herramientas',
     'cuentas',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
