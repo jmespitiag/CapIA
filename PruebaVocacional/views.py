@@ -96,7 +96,7 @@ def result(request,id_estudiante):
         area = areas[clave]
         percentage = (puntos[clave]/total_puntos)*100
         percentage = format(percentage, '.2f')
-        ranking.append((area,percentage))
+        ranking.append((area,percentage))    
     test.area_test = ranking[0][0]
     test.save()
     print(ranking[0][0])

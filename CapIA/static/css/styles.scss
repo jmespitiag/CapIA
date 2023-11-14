@@ -832,3 +832,108 @@
     color: $secondary;
 
 }
+
+#register_background{
+    background-color: $secondary;
+}
+
+#register_container{
+    border: 10px solid $primary;
+    border-radius: 25px;
+}
+
+#register_tittle{
+    font-size: 'Roboto';
+    font-weight: bold;
+    color: $primary;
+}
+
+#send_button{
+    font-size: 'Roboto';
+    font-weight: bold;
+    color: $primary;
+}
+
+#button_register{
+    color: $primary;
+    border: 2px solid $primary;
+    background-color: $secondary;
+}
+
+#input_register{
+    color: black;
+    background-color: $secondary;
+    font-size: 'Roboto';
+    font-weight: normal;
+
+}
+
+#customRadio1{
+    background-color: $secondary;
+    color: $secondary;
+    font-size: 'Roboto';
+    font-weight: bold;
+    box-shadow: 0 0 0 1px #dbb973, 0 0 0 0.2rem #dbb973;
+    box-shadow: 0 0 0 1px $secondary, 0 0 0 0.2rem $secondary;
+}
+
+.my-custom-radio input[type="radio"]:checked+.custom-control-label::before {
+    background-color: #dbb973; /* Cambia esto al color que desees */
+    border-color: #dbb973;
+    /* Cambia esto al color que desees */
+}
+
+#customRadio2{
+    background-color: $secondary;
+    color: $secondary;
+    font-size: 'Roboto';
+    font-weight: bold;
+    box-shadow: 0 0 0 1px #dbb973, 0 0 0 0.2rem #dbb973;
+    box-shadow: 0 0 0 1px $secondary, 0 0 0 0.2rem $secondary;
+
+}
+
+#label_choice{
+    font-size: 'Roboto';
+    font-weight: normal;
+
+}
+
+#password_r{
+    color: $primary;
+    background-color: $secondary;
+    font-size: 'Roboto';
+    font-weight: normal;
+} 
+
+#button_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#faculty{
+    font-size: 'Roboto';
+    font-weight: normal;
+    color: black;
+}
+
+#capy_taciturno{
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#capy_preocupado{
+    display: flex;
+    width: 100% ;
+    height: 100%;
+    
+}
+
+#label_choice_info{
+    font-size: 'Roboto';
+    font-weight: bold;
+}
+
+

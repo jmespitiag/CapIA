@@ -1,135 +1,162 @@
 
-{% load static %}
+   {% load static %}
 
-<head>
-    <title>¡Hi!</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}"> 
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    
-</head>
-<body>
-
-    <div class="container">
-   
-       <div class="signup-form-container">
+   <head>
+       <title>¡Hi!</title>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+       <link rel="stylesheet" href="{% static 'css/styles.css' %}"> 
+       <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+       <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+       <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
        
-            <form method='post' role="form" id="register-form" autocomplete="off">
-                {% csrf_token %}
-            
-            <div class="form-header">
-             <h3 class="form-title"><i class="fa fa-user"></i> Sign Up</h3>
-                         
-            <div class="pull-right">
-                <h3 class="form-title"><span class="glyphicon glyphicon-pencil"></span></h3>
-            </div>
-                         
-            </div>
-            
-            <div class="form-body">
-                         
-
+   </head>
+   <body>
+   
+   
+     <section class="vh-100" id='register_background'>
+       <div class="container h-100">
+         <div class="row d-flex justify-content-center align-items-center h-100">
+           <div class="col-lg-12 col-xl-11">
+             <div class="card text-black" id='register_container'>
+               <div class="card-body p-md-5">
+                 <div class="row justify-content-center">
+                   <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+     
+                     <p id='register_tittle' class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">¡Regístrate!</p>
+     
+                     <form method='post' role="form" id="register-form" autocomplete="off">
+                       {% csrf_token %}
+                   
+                           <div class="form-header">
+                                       
+                           <div class="pull-right">
+                               <h3 class="form-title"><span class="glyphicon glyphicon-pencil"></span></h3>
+                           </div>
+                                       
+                           </div>
                            
-                 <div class="form-group">
-                      <div class="input-group">
-                     <div class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></div>
-                      <input name="nombre" type="text" class="form-control" placeholder="Nombre">
-                      </div>
-                      <span id="error_nombre" class="help-block">{{ form.nombre.errors }}</span>                  
+                           <div class="form-body">
+                                       
+               
+                                         
+                               <div class="form-group">
+                                     <div class="input-group">
+                                   <div class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></div>
+                                     <input id='input_register' name="nombre" type="text" class="form-control" placeholder="Nombre">
+                                     </div>
+                                    <span id="error_nombre" class="help-block">{{ form.nombre.errors }}</span> 
+                                                 
+                               </div>
+               
+                               <div class="form-group">
+                                 <div class="input-group">
+                                   <div class="custom-control custom-radio my-custom-radio">
+                                       <input  type="radio" class="custom-control-input" id="customRadio1" name="universitario" value='True'>
+                                       <label id='label_choice'class="custom-control-label" for="customRadio1">Soy estudiante de pregrado</label>
+                                   </div>
+                               
+                                   <div class="custom-control custom-radio mb-3 my-custom-radio">
+                                       <input type="radio" class="custom-control-input" id="customRadio2" name="universitario" value='False'>
+                                       <label id='label_choice' class="custom-control-label" for="customRadio2">No soy estudiante de pregrado</label>
+                                   </div>
+                                   <span id="error_universitario" class="help-block">{{ form.universitario.errors }}</span>
+                               </div>
+                               
+                                     
+                                 </div>
+                                       
+                             <div class="form-group" id="campo-oculto" style="display: none;">
+                               <div class="input-group">
+                             <div class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></div>
+                               <input id='input_register' name="carrera" type="text" class="form-control" placeholder="Carrera">
+                               </div>
+                               <span id="error_carrera" class="help-block">{{ form.carrera.errors }}</span>
+                                 
+                             </div>
+                         <div class="form-group">
+                           <div class="input-group">
+                           <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
+                           <input id='input_register' name="username" type="text" class="form-control" placeholder="Username">
+                           </div>
+                           <span id="error_username" class="help-block">{{ form.username.errors }}</span>
+                                   
+               
+                           </div>
+               
+                                         
+                               <div class="row">
+                                         
+                                     <div class="form-group col-lg-6">
+                                         <div class="input-group">
+                                         <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
+                                         <input name="password1" id="password" type="password" class="form-control" placeholder="Password">
+                                         </div>  
+                                         <span id="error_password1" class="help-block">{{ form.password1.errors }}</span>
+                                         
+                                     </div>
+                                             
+                                     <div class="form-group col-lg-6">
+                                         <div class="input-group">
+                                         <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
+                                         <input name="password2" id="password" type="password" class="form-control" placeholder="Retype Password">
+                                         </div>  
+                                         <span id="error_password2" class="help-block">{{ form.password2.errors }}</span>
+                                 
+                                     </div>
+                                             
+                               </div>
+                                         
+                                         
+                             </div>
+                             <div id='button_div'>
+                               <div class="form-footer">
+                                     <button id='button_register' type="submit" class="btn btn-info">
+                                     <span id='send_button' class="glyphicon glyphicon-log-in"></span> ¡Enviar!
+                                     </button>
+                               </div>
+                             </div>
+                 
+                 
+                     </form>
+                      
+                   </div>
+                   <div class="col-md-5 col-lg-6 col-xl-5 order-2 order-lg-1 align-items-center">
+   
+                     <div id='square'>
+                       <img id='capy_preocupado' class="img-fluid h-100" src="https://i.postimg.cc/4xrDzfMf/Capy-preocupado.png" alt="Capy_Love">
+                     </div>
+                   </div> 
+   
                  </div>
-
-                 <div class="form-group">
-                    <div class="input-group">
-                        <div class="custom-control custom-radio">
-                            <input type="radio" class="custom-control-input" id="customRadio1" name="universitario" value='True'>
-                            <label class="custom-control-label" for="customRadio1">Soy estudiante de pregrado</label>
-                          </div>
-                          
-                          <div class="custom-control custom-radio mb-3">
-                            <input type="radio" class="custom-control-input" id="customRadio2" name="universitario" value='False'>
-                            <label class="custom-control-label" for="customRadio2">No soy estudiante de pregrado</label>
-                          </div>
-                      </div>
-                      <span id="error_universitario" class="help-block">{{ form.universitario.errors }}</span>                      
-                  </div>
-                         
-               <div class="form-group" id="campo-oculto" style="display: none;">
-                <div class="input-group">
-               <div class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></div>
-                <input name="carrera" type="text" class="form-control" placeholder="Carrera">
-                </div>
-                <span id="error_carrera" class="help-block">{{ form.carrera.errors }}</span>                      
-              </div>
-           <div class="form-group">
-            <div class="input-group">
-            <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
-            <input name="username" type="text" class="form-control" placeholder="Username">
-            </div>
-            <span id="error_username" class="help-block">{{ form.username.errors }}</span>                      
-
+               </div>
+             </div>
+           </div>
+         </div>
        </div>
-
-                           
-                 <div class="row">
-                           
-                      <div class="form-group col-lg-6">
-                           <div class="input-group">
-                           <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
-                           <input name="password1" id="password" type="password" class="form-control" placeholder="Password">
-                           </div>  
-                           <span id="error_password" class="help-block">{{ form.password1.errors }}</span>                      
-                   
-                      </div>
-                               
-                      <div class="form-group col-lg-6">
-                           <div class="input-group">
-                           <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
-                           <input name="password2" type="password" class="form-control" placeholder="Retype Password">
-                           </div>  
-                           <span id="error_password2" class="help-block">{{ form.password2.errors }}</span>                      
-                   
-                      </div>
-                               
-                </div>
-                           
-                           
-               </div>
+     </section>
+     <script>
+       const opcion1Radio = document.getElementById("customRadio1");
+       const opcion2Radio = document.getElementById("customRadio2");
+       const campoOculto = document.getElementById("campo-oculto");
+     
+       opcion1Radio.addEventListener("change", function() {
+         if (opcion1Radio.checked) {
+           campoOculto.style.display = "block";
+         } else {
+           campoOculto.style.display = "none";
+         }
+       });
+     
+       opcion2Radio.addEventListener("change", function() {
+         if (opcion2Radio.checked) {
+           campoOculto.style.display = "none";
+         }
+       });
+     </script>
+   
+   
+   
                
-               <div class="form-footer">
-                    <button type="submit" class="btn btn-info">
-                    <span class="glyphicon glyphicon-log-in"></span> Regístrame !
-                    </button>
-               </div>
-   
-   
-               </form>
-               
-              </div>
-   
-    </div>
-       
-   
-<script>
-    const opcion1Radio = document.getElementById("customRadio1");
-    const opcion2Radio = document.getElementById("customRadio2");
-    const campoOculto = document.getElementById("campo-oculto");
-  
-    opcion1Radio.addEventListener("change", function() {
-      if (opcion1Radio.checked) {
-        campoOculto.style.display = "block";
-      } else {
-        campoOculto.style.display = "none";
-      }
-    });
-  
-    opcion2Radio.addEventListener("change", function() {
-      if (opcion2Radio.checked) {
-        campoOculto.style.display = "none";
-      }
-    });
-  </script>
-   </body>
+      </body>

@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Student
 from PruebaVocacional.models import Test
+from PruebaVocacional.models import Test
 from .forms import StudentForm, StudentRegister, StudentChange
 from django.contrib.auth import authenticate, login
 
@@ -17,8 +18,16 @@ def home_name(request):
             password = form.cleaned_data['password']
             user = authenticate(request, username=username, password=password)
             if user is not None:
-                login(request, user)
-                return redirect('home', id_estudiante=user.id_estudiante) 
+                if user.universitario:
+                    login(request, user)
+                    return redirect('home', id_estudiante=user.id_estudiante) 
+                else:
+                    instance = Test.objects.filter(id_estudiante=user.id_estudiante).exists()
+                    if instance:
+                        return redirect('home', id_estudiante=user.id_estudiante) 
+                    else:
+                        return redirect('test', id_estudiante=user.id_estudiante) 
+                        
         else:
             print(form.errors)
             return render(request, 'home_name_errors.html', {'form': form})
@@ -59,12 +68,12 @@ def profile(request,id_estudiante):
                 test.save()
                 user.universitario = True
                 user.save()
-                return render(request,'profile.html',{'user':user})
+                return render(request,'profile.html',{'user':user, 'test': test})
             else:
                 print(form.errors)
         
         else:
             test = Test.objects.get(id_estudiante=user)
             form = StudentChange(instance=test)
-        return render(request,'profile.html',{'user':user, 'form':form})
+        return render(request,'profile.html',{'user':user, 'form':form, 'test': test})
             

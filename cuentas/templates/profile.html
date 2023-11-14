@@ -14,7 +14,7 @@
 </head>
 <body>
 
-<section class="vh-100" style="background-color: #f4f5f7;">
+<section id='register_background' class="vh-100">
     <div class="container py-5 h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col col-lg-6 mb-4 mb-lg-0">
@@ -22,53 +22,69 @@
             <div class="row g-0">
               <div class="col-md-4 gradient-custom text-center text-white"
                 style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
-                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
+                <img src="https://i.postimg.cc/Sx2022g1/capy-romantico.png"
                   alt="Avatar" class="img-fluid my-5" style="width: 80px;" />
                     <h5 id='profile_letter'>{{user.nombre}}</h5>
                 {% if user.universitario %}
                     <p id='profile_letter'> {{user.carrera}} </p>
                 {% else %}
-                <form method="post">
+                <div class="container">
+                  <form method="post" class="mt-4">
                     {% csrf_token %}
-                    
                     <div class="form-group">
-                        <label for="{{ form.area.id_for_label }}">Selecciona tu facultad:</label>
-                        {{ form.area }}
-                    </div>
-        
-                    <button type="submit" class="btn btn-primary">¡Dale!</button>
-        
-
-                </form>
+                      <label id='faculty'for="id_area">Selecciona tu facultad:</label>
+                      <select class="form-select" name="area" id="id_area">
+                          <option value="Administrativas y contables">Administrativas y contables</option>
+                          <option value="Humanísticas, Ciencias Jurídicas y Sociales">Humanísticas, Ciencias Jurídicas y Sociales</option>
+                          <option value="Artísticas">Artísticas</option>
+                          <option value="Ciencias de la salud">Ciencias de la salud</option>
+                          <option value="Ingenierías, carreras técnicas y computación">Ingenierías, carreras técnicas y computación</option>
+                          <option value="Ciencias exactas">Ciencias exactas</option>
+                          <option value="N/A" selected>N/A</option>
+                      </select>
+                  </div>
+                    <button id='button_register' type="submit" class="btn btn-primary">¡Dale!</button>
+                  </form>
+                </div>
                 {% endif %}
                 <i class="far fa-edit mb-5"></i>
               </div>
               <div class="col-md-8">
                 <div class="card-body p-4">
-                  <h6>Information</h6>
+                  <h6 id='label_choice_info' >Información</h6>
                   <hr class="mt-0 mb-4">
                   <div class="row pt-1">
                     <div class="col-6 mb-3">
-                      <h6>Email</h6>
-                      <p class="text-muted">info@example.com</p>
+                      <h6 id='label_choice'>Username</h6>
+                      <p id='label_choice' class="text-muted">{{user.username}}</p>
                     </div>
-                    <div class="col-6 mb-3">
-                      <h6>Phone</h6>
-                      <p class="text-muted">123 456 789</p>
-                    </div>
+                    {% if not user.universitario and test.area != 'N/A'%}
+
+
+                      <div class="col-6 mb-3">
+                        <h6id='label_choice'>Resultado Test</h6>
+                        <p id='label_choice' class="text-muted">{{test.area}}</p>
+                      </div>
+
+                    {% endif %}
+
                   </div>
-                  <h6>Projects</h6>
+                  <h6>Más</h6>
                   <hr class="mt-0 mb-4">
                   <div class="row pt-1">
                     <div class="col-6 mb-3">
-                      <h6>Recent</h6>
-                      <p class="text-muted">Lorem ipsum</p>
+
+                      <a  id='button_register' class="btn btn-primary" href="{% url 'horario' id_estudiante=user.id_estudiante %}">¿Quieres ver tu horario?</a>
                     </div>
-                    <div class="col-6 mb-3">
-                      <h6>Most Viewed</h6>
-                      <p class="text-muted">Dolor sit amet</p>
-                    </div>
+
                   </div>
+                  <div class="row pt-1">
+                    <div class="col-6 mb-3">
+                      <a id='button_register' href="{% url 'agregar_clase' id_estudiante=user.id_estudiante %}" class="btn btn-primary">¿Tal vez cambiarlo?</a>
+                    </div>
+
+                  </div>
+
                   <div class="d-flex justify-content-start">
                     <a href="#!"><i class="fab fa-facebook-f fa-lg me-3"></i></a>
                     <a href="#!"><i class="fab fa-twitter fa-lg me-3"></i></a>

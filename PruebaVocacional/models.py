@@ -49,6 +49,7 @@ class Test(models.Model):
     area_test = models.CharField(choices=options,default='N/A',max_length=50)
     area = models.CharField(choices=options,default='N/A',max_length=50)
     
+    
     def __str__(self):
         return self.nombre
     

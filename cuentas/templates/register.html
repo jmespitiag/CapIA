@@ -14,104 +14,123 @@
 </head>
 <body>
 
-    <div class="container">
-   
-       <div class="signup-form-container">
-       
-            <form method='post' role="form" id="register-form" autocomplete="off">
-                {% csrf_token %}
-            
-            <div class="form-header">
-             <h3 class="form-title"><i class="fa fa-user"></i> Sign Up</h3>
-                         
-            <div class="pull-right">
-                <h3 class="form-title"><span class="glyphicon glyphicon-pencil"></span></h3>
-            </div>
-                         
-            </div>
-            
-            <div class="form-body">
-                         
 
-                           
-                 <div class="form-group">
-                      <div class="input-group">
-                     <div class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></div>
-                      <input name="nombre" type="text" class="form-control" placeholder="Nombre">
-                      </div>
-                                   
-                 </div>
+  <section class="vh-100" id='register_background'>
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-lg-12 col-xl-11">
+          <div class="card text-black" id='register_container'>
+            <div class="card-body p-md-5">
+              <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+  
+                  <p id='register_tittle' class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">¡Regístrate!</p>
+  
+                  <form method='post' role="form" id="register-form" autocomplete="off">
+                    {% csrf_token %}
+                
+                        <div class="form-header">
+                                    
+                        <div class="pull-right">
+                            <h3 class="form-title"><span class="glyphicon glyphicon-pencil"></span></h3>
+                        </div>
+                                    
+                        </div>
+                        
+                        <div class="form-body">
+                                    
+            
+                                      
+                            <div class="form-group">
+                                  <div class="input-group">
+                                <div class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></div>
+                                  <input id='input_register' name="nombre" type="text" class="form-control" placeholder="Nombre">
+                                  </div>
+                                              
+                            </div>
+            
+                            <div class="form-group">
+                              <div class="input-group">
+                                <div class="custom-control custom-radio my-custom-radio">
+                                    <input  type="radio" class="custom-control-input" id="customRadio1" name="universitario" value='True'>
+                                    <label id='label_choice'class="custom-control-label" for="customRadio1">Soy estudiante de pregrado</label>
+                                </div>
+                            
+                                <div class="custom-control custom-radio mb-3 my-custom-radio">
+                                    <input type="radio" class="custom-control-input" id="customRadio2" name="universitario" value='False'>
+                                    <label id='label_choice' class="custom-control-label" for="customRadio2">No soy estudiante de pregrado</label>
+                                </div>
+                            </div>
+                            
+                                  
+                              </div>
+                                    
+                          <div class="form-group" id="campo-oculto" style="display: none;">
+                            <div class="input-group">
+                          <div class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></div>
+                            <input id='input_register' name="carrera" type="text" class="form-control" placeholder="Carrera">
+                            </div>
+                              
+                          </div>
+                      <div class="form-group">
+                        <div class="input-group">
+                        <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
+                        <input id='input_register' name="username" type="text" class="form-control" placeholder="Username">
+                        </div>
+                                
+            
+                        </div>
+            
+                                      
+                            <div class="row">
+                                      
+                                  <div class="form-group col-lg-6">
+                                      <div class="input-group">
+                                      <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
+                                      <input name="password1" id="password_r" type="password" class="form-control" placeholder="Password">
+                                      </div>  
+                                      
+                                  </div>
+                                          
+                                  <div class="form-group col-lg-6">
+                                      <div class="input-group">
+                                      <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
+                                      <input name="password2" id="password_r" type="password" class="form-control" placeholder="Retype Password">
+                                      </div>  
+                              
+                                  </div>
+                                          
+                            </div>
+                                      
+                                      
+                          </div>
+                          <div id='button_div'>
+                            <div class="form-footer">
+                                  <button id='button_register' type="submit" class="btn btn-info">
+                                  <span id='send_button' class="glyphicon glyphicon-log-in"></span> ¡Enviar!
+                                  </button>
+                            </div>
+                          </div>
+              
+              
+                  </form>
+                   
+                </div>
+                <div class="col-md-5 col-lg-6 col-xl-5 order-2 order-lg-1 align-items-center">
 
-                 <div class="form-group">
-                    <div class="input-group">
-                        <div class="custom-control custom-radio">
-                            <input type="radio" class="custom-control-input" id="customRadio1" name="universitario" value='True'>
-                            <label class="custom-control-label" for="customRadio1">Soy estudiante de pregrado</label>
-                          </div>
-                          
-                          <div class="custom-control custom-radio mb-3">
-                            <input type="radio" class="custom-control-input" id="customRadio2" name="universitario" value='False'>
-                            <label class="custom-control-label" for="customRadio2">No soy estudiante de pregrado</label>
-                          </div>
-                      </div>
-                      
+                  <div id='square'>
+                    <img id='capy_taciturno' class="img-fluid h-100" src="https://i.postimg.cc/D0hHCTCh/Whats-App-Image-2023-11-04-at-12-35-25-removebg-preview.png" alt="Capy_Love">
                   </div>
-                         
-               <div class="form-group" id="campo-oculto" style="display: none;">
-                <div class="input-group">
-               <div class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></div>
-                <input name="carrera" type="text" class="form-control" placeholder="Carrera">
-                </div>
-                   
+                </div> 
+
               </div>
-           <div class="form-group">
-            <div class="input-group">
-            <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
-            <input name="username" type="text" class="form-control" placeholder="Username">
             </div>
-                     
-
-       </div>
-
-                           
-                 <div class="row">
-                           
-                      <div class="form-group col-lg-6">
-                           <div class="input-group">
-                           <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
-                           <input name="password1" id="password" type="password" class="form-control" placeholder="Password">
-                           </div>  
-                           
-                      </div>
-                               
-                      <div class="form-group col-lg-6">
-                           <div class="input-group">
-                           <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
-                           <input name="password2" type="password" class="form-control" placeholder="Retype Password">
-                           </div>  
-                   
-                      </div>
-                               
-                </div>
-                           
-                           
-               </div>
-               
-               <div class="form-footer">
-                    <button type="submit" class="btn btn-info">
-                    <span class="glyphicon glyphicon-log-in"></span> Regístrame !
-                    </button>
-               </div>
-   
-   
-               </form>
-               
-              </div>
-   
+          </div>
+        </div>
+      </div>
     </div>
-       
-   
-<script>
+  </section>
+  <script>
     const opcion1Radio = document.getElementById("customRadio1");
     const opcion2Radio = document.getElementById("customRadio2");
     const campoOculto = document.getElementById("campo-oculto");
@@ -130,4 +149,8 @@
       }
     });
   </script>
+
+
+
+            
    </body>
